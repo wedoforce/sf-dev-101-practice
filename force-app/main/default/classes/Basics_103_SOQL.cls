@@ -2,6 +2,7 @@ public with sharing class Basics_103_SOQL {
 
     public static void Task01() {
         //put your code here
+        System.debug([select fields(all) from account LIMIT 200]);
     }
 
     public static void Task02() {

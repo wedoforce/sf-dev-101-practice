@@ -23,7 +23,8 @@ For more details complete following trailhead: https://trailhead.salesforce.com/
 
 ## Task 1
 
-Write a SOQL query to get all fields of all Accounts and show it using System.debug()
+Write a SOQL query to get all fields of all Contacts
+P.S. add screenshot in repo
 
 ## Task 2
 
