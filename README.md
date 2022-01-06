@@ -1,61 +1,28 @@
 # DML
-As SOQL Data Manipulation Language provides tools to operate with data records
+As SOQL Data Manipulation Language provides tools to operate with data records. If SOQL gives you opportunity to read data, DML helps with creating, editing an deleteing data.
 
-We recommend you to complete following trailhead module https://trailhead.salesforce.com/en/content/learn/modules/soql-for-admins/get-started-with-soql-queries
+We recommend you to complete following trailhead module https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_dml
 
 # Prerequirements for homework
 
 * Set your scratch org as default
-* Execute script upload_103_soql.sh (./upload_103_soql.sh)
 * Write your solution in Basics_103_DML.cls
 
 
 ## Task 1
 
-Write a SOQL query to get all fields of all Contacts
-P.S. add screenshot in repo
+Insert new Account with your last name as Account.Name using apex DML. Show it using System.debug()
 
 ## Task 2
 
-Write a SOQL query to get total number of Accounts and show it using System.debug()
-
+Insert Contact for created in previous task Account with FirstName = 'Test' and LastName = 'Contact'
 ## Task 3
 
-Write a SOQL query to get all Accounts ordered by the Name field by descending. Make output in loop using System.debug()
+Update Test Contact with email = 'ex@maple.com' and insert a new one with your first name and last name in one DML;
 
 ## Task 4
 
-Write a SOQL query to get all Accounts with names contains 'elle'. Make output in loop using System.debug()
-
+Delete Test Contact and Account in one DML
 ## Task 5
 
-Write a SOQL query to get all Accounts with names NumberOfEmployees > 3 and < 7. Make output in loop using System.debug()
-
-## Task 6
-
-Write a SOQL query to get all related contacts lastnames to Rachel Green-Geller Ltd account
-
-## Task 7
-
-Write a SOQL query to get all accounts and related contacts (use subselect)
-
-## Task 8
-
-Write a SOQL query to get average number of employees of all accounts.
-
-## Task 9
-
-Write a SOQL query to get the only one account record without WHERE keyword.
-
-## Task 10
-
-Write a SOQL query to get total number of employees of all accounts.
-
-## Task 11
-
-Write a SOQL query to get all contacts grouped by LastName.
-
-## Task 12
-
-Write a SOQL query to get all contact names and query it 150 times in the loop.
-
+Insert Contact and User in one DML
