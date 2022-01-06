@@ -1,4 +1,4 @@
-public with sharing class Basics_103_SOQL {
+public with sharing class Basics_103_DML {
 
     public static void Task01() {
         //put your code here

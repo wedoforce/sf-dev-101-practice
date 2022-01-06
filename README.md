@@ -1,24 +1,13 @@
-# SOQL
-All data in Salesforce (records such as Accounts, Contacts, etc) stores in database as tables. To operate with this data we are using Salesforce Object Query Language (SOQL). With SOQL you can access any record(s) on your Salesforce org for reading, editing. It is very similar to Structured Query Language (SQL). The difference is that SOQL returns collection of SObjects, so you can already work with these records as Objects in Apex without extra transformations of data.
+# DML
+As SOQL Data Manipulation Language provides tools to operate with data records
 
 We recommend you to complete following trailhead module https://trailhead.salesforce.com/en/content/learn/modules/soql-for-admins/get-started-with-soql-queries
-
-
-# SOSL
-Salesforce Object Search Language (SOSL) is a Salesforce search language that is used to perform text searches in records. Use SOSL to search fields across multiple standard and custom object records in Salesforce. SOSL is similar to Apache Lucene.
-
-For example you need to find all Accounts, Contacts, Cases, Custom Objects which name fields contains some value. Instead of making 4 separate SOQL queries you can make one SOSL query that will return list of SObjects for all found records.
-
-List<List<SObject>> searchList = [FIND 'Some Text' IN ALL FIELDS 
-                                      RETURNING Account(Name), Contact(Name), Case(Name), CustomObject__c(Name)];
-
-For more details complete following trailhead: https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_sosl
 
 # Prerequirements for homework
 
 * Set your scratch org as default
 * Execute script upload_103_soql.sh (./upload_103_soql.sh)
-* Write your solution in Basics_103_SOQL.cls
+* Write your solution in Basics_103_DML.cls
 
 
 ## Task 1
