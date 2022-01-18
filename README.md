@@ -6,7 +6,7 @@ We recommend you to complete following trailhead module https://trailhead.salesf
 # Prerequirements for homework
 
 * Set your scratch org as default
-* Write your solution in Basics_103_DML.cls
+* Write your solution in DML101.cls
 
 
 ## Task 1
