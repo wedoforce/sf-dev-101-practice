@@ -1,1 +1,67 @@
-# sf-dev-101
+# Course overview
+
+#Welcome to WeDoForce!
+
+##We developed special tasks for you and separated them on a few blocks.
+
+- Basic 
+    -
+    - Git
+        - Configuration
+        - Clone
+        - Checkout
+        - Branch (+ checkout -b)
+        - Status
+        - Add
+        - Commit
+        - Push
+        - Create PR
+    - SFDX CLI
+    - Apex Basics
+        - Variable types
+            - primitive types
+            - Collection data types (List, Set, Map)
+        - Operations with variables
+        - Loops (for, while)
+        - OOP
+            - Classes and methods
+            - Class Access Modifiers
+            - Objects
+            - Encapsulation
+            - Polymorphism
+            - Inheritance
+            - Abstraction
+        - Database interactions
+            - SOQL
+            - DML
+            - Dynamic SOQL?
+            - Triggers?
+        - Testing
+    - Salesforce Administration
+        - Object-level-security
+            - Profiles
+            - Permission sets
+        - Field-level-security
+        - Record-level security
+            - organization-wide sharing defaults
+            - role hierarchies
+            - sharing rules
+            - Apex managed sharing
+    - Basic Salesforce Applications (How to create app)
+- Working in pairs
+    -
+    - Ping Pong ...
+    - LWC Introduction 
+        - HTML, JS
+        - apex interactions
+        - Jest Testing
+    - Developing Salesforce App
+- Team work (Final Project)
+    - 
+    - Agile introduction
+        - Scrum, Kanban
+        - Planning & Estimation
+        - Communication with stakeholders
+        - Retrospective
+    - Working with team on one big project
+    - Using best practices 
