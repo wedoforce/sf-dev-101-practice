@@ -1,7 +1,7 @@
 # Apex Basics
 * **Topics:**
     * [Variables](variables)
-    * [Statements](statements)
+    * [Conditional Statements](conditionalstatements)
     * [Loops](loops)
 * [Best Practices](bestpractices)
 * [Cheat Sheet](cheatsheet)
@@ -11,12 +11,12 @@
 ***
 ## Variables
 ### **Why Variables at all?**
-One could say:  
-"Every program manipulates with input values taken from somewhere to provide new values as output.  
-These output values can become further inputs for another program or finally be used by a human for decision making."  
-  
-In order to work with the values, programs written in any language are using *variables* to store those values. Every *variable* is given a name and you can check values in the *variable* by accessing it by its name.  
-In other words, you won't be able to pass and information between different pieces of your programm without *variables*.  
+One could say:
+"Every program manipulates with input values taken from somewhere to provide new values as output.
+These output values can become further inputs for another program or finally be used by a human for decision making."
+
+In order to work with the values, programs written in any language are using *variables* to store those values. Every *variable* is given a name and you can check values in the *variable* by accessing it by its name.
+In other words, you won't be able to pass and information between different pieces of your programm without *variables*.
 
 ### **Variables in Salesforce (Apex)**
 #### **Must Read**
@@ -35,14 +35,14 @@ In other words, you won't be able to pass and information between different piec
     1. [Operations precedence](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_expressions_operators_precedence.htm)
 1. [Numeric types conversion](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_rules_of_conversion.htm)
 
-## Statements
+## Conditional Statements
 
-### **Why Statements?**
-Statements are there to help you control the flow of your programm.  
-e.g.  
-if a Stock Price is above some threshold - you would like to apply one algorithm  
-if below the threshold - another.  
-Decision for a statement is evaluated based on the *values* and *operations* you, as a developer, decide for your program.  
+### **Why Conditional Statements?**
+Conditional Statements are there to help you control the flow of your programm.
+e.g.
+if a Stock Price is above some threshold - you would like to apply one algorithm
+if below the threshold - another.
+Decision for a statement is evaluated based on the *values* and *operations* you, as a developer, decide for your program.
 What is important, is that the evaluation must resolve to a *value* of Boolean Type.
 #### **Must Read**
 1. [if-else statement](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_if_else.htm)
@@ -50,9 +50,9 @@ What is important, is that the evaluation must resolve to a *value* of Boolean T
 ## Loops
 
 ### **Why Loops?**
-In real life, you will often work with collection of elements (List of Contact from an Account or a Set of currencies supported).  
-In order to analyse data in those collections loops are used.  
-Inside loop you can have access to an element from the collection. Do calculations on top of it and store results into another variable. Switch to the next element from the colleciton, etc.  
+In real life, you will often work with collection of elements (List of Contact from an Account or a Set of currencies supported).
+In order to analyse data in those collections loops are used.
+Inside loop you can have access to an element from the collection. Do calculations on top of it and store results into another variable. Switch to the next element from the colleciton, etc.
 Using special words: *break* and *continue* you can either complete the loop immedieatly or switch to the next item immediately.
 
 #### **Must Read**
@@ -63,12 +63,12 @@ Using special words: *break* and *continue* you can either complete the loop imm
 ***
 
 # Best Practices
-1. Initialize variables, if possible, to avoid program failures due to **null**. 
-1. Pick Up proper Data Types  
+1. Initialize variables, if possible, to avoid program failures due to **null**.
+1. Pick Up proper Data Types
 `Integer studentsCount, not Dobule studentsCount`
-1. Give descriptive names  
+1. Give descriptive names
 `Integer studentsCount, not Integer count`
-1. Use lowerCcamelCase for variable names  
+1. Use lowerCcamelCase for variable names
 `studentsCount, not StudentsCount/STUDENTScount`
 
 ## Cheat Sheet
