@@ -2,7 +2,7 @@
 
 - **Topics:**
   - [Variables](#variables)
-  - [Statements](#statements)
+  - [Conditional Statements](#conditionalstatements)
   - [Loops](#loops)
 - [Best Practices](#bestpractices)
 - [Cheat Sheet](#cheatsheet)
@@ -42,15 +42,15 @@ In other words, you won't be able to pass information between different pieces o
    1. [Operations precedence](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_expressions_operators_precedence.htm)
 1. [Numeric types conversion](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_rules_of_conversion.htm)
 
-## Statements
+## Conditional Statements
 
-### **Why Statements?**
+### **Why Conditional Statements?**
 
-Statements are there to help you control the flow of your programm.  
-e.g.  
-if a Stock Price is above some threshold - you would like to apply one algorithm  
-if below the threshold - another.  
-Decision for a statement is evaluated based on the _values_ and _operations_ you, as a developer, decide for your program.  
+Conditional Statements are there to help you control the flow of your programm.
+e.g.
+if a Stock Price is above some threshold - you would like to apply one algorithm
+if below the threshold - another.
+Decision for a statement is evaluated based on the _values_ and _operations_ you, as a developer, decide for your program.
 What is important, is that the evaluation must resolve to a _value_ of Boolean Type.
 
 #### **Must Read**
@@ -134,5 +134,5 @@ TODO: practice reference
 
 ## Additional Resources
 
-- [Strongly Typed and Weakly Typed languages](https://stackoverflow.com/questions/2690544/what-is-the-difference-between-a-strongly-typed-language-and-a-statically-typed#:~:text=Strongly%20typed%20means%2C%20a%20variable,it%20into%20the%20int%20123%20.)
 - TODO: Add information about bits/bytes/how memory is allocated based on variable type
+- TODO: Introduce Heap Limit
