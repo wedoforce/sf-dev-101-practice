@@ -35,7 +35,7 @@
 1. ...
 
 ***
-## Pratice
+## Practice
 ### Pre-requisite
 :notebook: `I need to understand pre-requisites if it makes sense to jump into practice`
 * Knowledge
