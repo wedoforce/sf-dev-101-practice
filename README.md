@@ -1,4 +1,4 @@
-# [Area of the Salesforce Platform] [Aspect of that Area] :notebook: `to correlate with branch name`
+# Git 101
 
 - **Topics:**
   - [Topic 1](#topic1)
@@ -12,35 +12,61 @@
 
 ---
 
-## Topic 1
+## Version Control System
 
-### **Why [Topic 1] at all?**
+### **Why VCS at all?**
 
-:notebook: `why do we need to consider the topic in generral (NOT Salesforce specific)?`
+Version control is important to keep track of changes — and keep every team member working on the right version. You should use version control software for all code, files, and assets that multiple team members will collaborate on.
 
-### **[Topic 1] in Salesforce**
+In short, it allows you to track changes, roll them back, and see who did what with the codebase. This is an essential tool for working in a development *team*.
 
-:notebook: `the [Topic 1] details as part of Salesforce Platform`
+### **VCS in Salesforce**
 
-#### **[Topic 1] Must Read**
+As any software development, Salesforce projects need to control source code versions to make it easier to collaborate within the team and across an organization.
 
-:notebook: `to get enough theoretical knowledge`
+## Git
 
-1. [Reading 1](reading1)
-   1. [Reading 1.1](reading1.1)
-   1. [...](...)
-1. [Reading 2](reading2)
-1. [...](...)
+### **Why Git at all?**
 
-## Topic 2
+Git is a ditribited version control system and is open source. In fact, Git version control is one of the most popular options. It's open source, so anyone can use it, and anyone can contribute to it.
 
-...
+Git is de-facto industry standard.
+
+There are a lot of different ways to use Git. For this course we will use command line, as we aim to give you the foundation.
+
+#### **VSC and Git Must Read**
+
+1. [Pro Git](https://git-scm.com/book/en/v2)
+    1. [About version control](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
+    1. [What is Git?](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git?)
+1. [Installing Git](#installation)
+1. [Pro Git](https://git-scm.com/book/en/v2)
+    1. [First time Git setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
+    1. [Getting help](https://git-scm.com/book/en/v2/Getting-Started-Getting-Help)
+    1. [Getting a repo](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)
+    1. [Recording your change to a repo](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
 
 # Best Practices
 
-:notebook: `I want to know best practices for engineers`
+1. Make commits small and concise. E.g. you made a method that works and doesn't break the build - commit it!
+1. A commit should not break the build. Ideally every commit should be deployable and pass all the auto-tests.
+1. Commit messages should describe what was added, how the code base has changed. A commit message can be multiline.
 
-1. ...
+Bad commit messages:
+
+* `done`
+* `bug fixed`
+* `fixed tests 5`
+
+Good commit messages:
+
+* `account hierarchy table lwc`
+* `removed AccountHandler.updateRelatedContacts`
+* ```
+    updates account with sales hierarchu group information
+
+    <a longer description of what and why it does it>
+    ```
 
 ## Cheat Sheet
 
