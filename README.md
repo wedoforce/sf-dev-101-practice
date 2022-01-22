@@ -1,12 +1,13 @@
 # Apex Basics
 * **Topics:**
-    * [Variables](variables)
-    * [Statements](statements)
-    * [Loops](loops)
-* [Best Practices](bestpractices)
-* [Cheat Sheet](cheatsheet)
-* [Extra Readings](extrareadings)
-* [Additional Resources](additionalresources)
+    * [Variables](#variables)
+    * [Statements](#statements)
+    * [Loops](#loops)
+* [Best Practices](#bestpractices)
+* [Cheat Sheet](#cheatsheet)
+* [Practice](#practice)
+* [Extra Readings](#extrareadings)
+* [Additional Resources](#additionalresources)
 
 ***
 ## Variables
@@ -16,7 +17,7 @@ One could say:
 These output values can become further inputs for another program or finally be used by a human for decision making."  
   
 In order to work with the values, programs written in any language are using *variables* to store those values. Every *variable* is given a name and you can check values in the *variable* by accessing it by its name.  
-In other words, you won't be able to pass and information between different pieces of your programm without *variables*.  
+In other words, you won't be able to pass information between different pieces of your programm without *variables*.  
 
 ### **Variables in Salesforce (Apex)**
 #### **Must Read**
@@ -62,7 +63,7 @@ Using special words: *break* and *continue* you can either complete the loop imm
 
 ***
 
-# Best Practices
+## Best Practices
 1. Initialize variables, if possible, to avoid program failures due to **null**. 
 1. Pick Up proper Data Types  
 `Integer studentsCount, not Dobule studentsCount`
@@ -84,15 +85,33 @@ Using special words: *break* and *continue* you can either complete the loop imm
 
 ***
 
-# Extra Readings
+## Practice
+### Pre-requisite
+* :heavy_check_mark: No special knowledge required
+* :heavy_exclamation_mark: environment has to be setup
+TODO:
+- [ ] add instructions how to run script into templates
+The script is to check:
+- [ ] sh/bash can be executed
+- [ ] npm is installed with version above X
+- [ ] sfdx is installed with version above Y
+- [ ] devhub org is configured
+- [ ] scratch org is default
+- [ ] git is installed 
+- [ ] git is configred with name/email
+- [ ] extensions are installed
+- [ ] run npm install
+
+
+## Extra Readings
 * [Enums](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_enums.htm)
 * [Constants](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_constants.htm)
 * [Switch statement](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_switch.htm)
 * [Do-While loop](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_loops_do_while.htm)
 * [Mastering Collections in Apex](https://developer.salesforce.com/blogs/2021/10/mastering-apex-collections)
 
-# Additional Resources
+## Additional Resources
 * [Strongly Typed and Weakly Typed languages](https://stackoverflow.com/questions/2690544/what-is-the-difference-between-a-strongly-typed-language-and-a-statically-typed#:~:text=Strongly%20typed%20means%2C%20a%20variable,it%20into%20the%20int%20123%20.)
-
+* Add information about bits/bytes/how memory is allocated based on variable type
 
 TODO: Introduce Heap Limit
