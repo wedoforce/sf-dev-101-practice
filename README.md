@@ -105,7 +105,6 @@ Using special words: _break_ and _continue_ you can either complete the loop imm
 ### Pre-requisite
 
 - Knowledge: :heavy_check_mark: No special knowledge required
-  ...
 - Technical: :heavy_exclamation_mark: environment has to be setup
   - Open terminal (Ctrl/Cmd + Shift + P -> Terminal:Create New Termnial)
   - Run [prerequisite.sh](./scripts/prerequisite.sh) script in the terminal to be technically ready
