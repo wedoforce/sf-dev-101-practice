@@ -1,12 +1,12 @@
 # Apex Basics
 * **Topics:**
-    * [Variables](variables)
-    * [Conditional Statements](conditionalstatements)
-    * [Loops](loops)
-* [Best Practices](bestpractices)
-* [Cheat Sheet](cheatsheet)
-* [Extra Readings](extrareadings)
-* [Additional Resources](additionalresources)
+    * [Variables](#variables)
+    * [Conditional Statements](#conditionalstatements)
+    * [Loops](#loops)
+* [Best Practices](#bestpractices)
+* [Cheat Sheet](#cheatsheet)
+* [Extra Readings](#extrareadings)
+* [Additional Resources](#additionalresources)
 
 ***
 ## Variables
