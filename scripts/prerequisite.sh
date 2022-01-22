@@ -37,6 +37,20 @@ echo "SFDX CLI is good"
 echo ""
 
 
+echo "Installing project Dependencies(it may take time, please wait).."
+echo "npm i"
+npm i
+if (( $? != 0 )); then
+    echo ""
+    echo "Dependencies installation Failed";
+    echo ""
+    echo "    Ask for help!";
+    exit 1;
+fi
+echo "Dependencies are good"
+echo ""
+
+
 echo "Checking VSCode.."
 code --version
 if (( $? != 0 )); then
