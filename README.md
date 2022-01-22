@@ -84,34 +84,19 @@ Using special words: _break_ and _continue_ you can either complete the loop imm
 1. Use lowerCcamelCase for variable names  
    `studentsCount, not StudentsCount/STUDENTScount`
 
-## Cheat Sheet
-
-:notebook: `I want to have a cheat sheet/data sheet at the end to get back to it anytime`
-
-1. ...
-
 ---
 
-## Practice
+## Cheat Sheet
 
-### Pre-requisite
-
-:notebook: `I need to understand pre-requisites if it makes sense to jump into practice`
-
-- Knowledge
-  ...
-- Technical
-  - Open terminal (Ctrl/Cmd + Shift + P -> Terminal:Create New Termnial)
-  - Run [prerequisite.sh](./scripts/prerequisite.sh) script in the terminal to be technically ready
-  ```bash
-  ./scripts/prerequisite.sh
-  ```
-
-### Overview
-
-1. :notebook: `Where are practice tasks`
-1. :notebook: `How to know if I've done the task`
-1. :notebook: `How to troubleshoot`
+1. Primitve Types: `Boolean, String, Integer, Double` - _keep simple values_
+1. Collections: `List, Set, Map` - _keep collection of elements_
+1. `[Type] [name] = [value] [;]` - to define a variable, e.g. `String name = 'engineer';`
+1. Use math operators: `+,-,*,/` - _for numeric operations_
+1. Use `+` - _sign to concatenate strings_
+1. Use logical _or, and_ `||, &&` - _for boolean algebra_
+1. Use `if-else,if` to control flow of your program
+1. Use `for` and `while` loops to iterate over collections or until condition
+1. Use `break` and `continue` to control loops immedieatly
 
 ---
 
@@ -128,6 +113,14 @@ Using special words: _break_ and _continue_ you can either complete the loop imm
   ./scripts/prerequisite.sh
   ```
 
+### Overview
+
+1. :notebook: `Where are practice tasks`
+1. :notebook: `How to know if I've done the task`
+1. :notebook: `How to troubleshoot`
+
+---
+
 ## Extra Readings
 
 - [Enums](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_enums.htm)
@@ -136,10 +129,9 @@ Using special words: _break_ and _continue_ you can either complete the loop imm
 - [Do-While loop](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_loops_do_while.htm)
 - [Mastering Collections in Apex](https://developer.salesforce.com/blogs/2021/10/mastering-apex-collections)
 
+---
+
 ## Additional Resources
 
 - [Strongly Typed and Weakly Typed languages](https://stackoverflow.com/questions/2690544/what-is-the-difference-between-a-strongly-typed-language-and-a-statically-typed#:~:text=Strongly%20typed%20means%2C%20a%20variable,it%20into%20the%20int%20123%20.)
-- Add information about bits/bytes/how memory is allocated based on variable type
-
-* [Additional Resource 1](addittionalresource1)
-* [...](...)
+- TODO: Add information about bits/bytes/how memory is allocated based on variable type
