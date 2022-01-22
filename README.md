@@ -1,12 +1,12 @@
 # Apex Basics
-TODO: Replace with TOC
-* **Variables**
-* **Statements**
-* **Loops**
-* **Cheat Sheet**
-* **Best Practices**
-* **Additional Readings**
-* **Additional Resources**
+* **Topics:**
+    * [Variables](variables)
+    * [Statements](statements)
+    * [Loops](loops)
+* [Best Practices](bestpractices)
+* [Cheat Sheet](cheatsheet)
+* [Extra Readings](extrareadings)
+* [Additional Resources](additionalresources)
 
 ***
 ## Variables
@@ -51,7 +51,7 @@ What is important, is that the evaluation must resolve to a *value* of Boolean T
 
 ### **Why Loops?**
 In real life, you will often work with collection of elements (List of Contact from an Account or a Set of currencies supported).  
-In order to analyse data in those collections one could use loops.  
+In order to analyse data in those collections loops are used.  
 Inside loop you can have access to an element from the collection. Do calculations on top of it and store results into another variable. Switch to the next element from the colleciton, etc.  
 Using special words: *break* and *continue* you can either complete the loop immedieatly or switch to the next item immediately.
 
@@ -59,18 +59,6 @@ Using special words: *break* and *continue* you can either complete the loop imm
 1. [basic for-loop](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_loops_for.htm)
 1. [while-loop](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_loops_while.htm)
 1. [for-loop over collection](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_loops_for_lists.htm)
-
-***
-
-## Cheat Sheet
-1. Primitve Types: `Boolean, String, Integer, Double` - *keep simple values*
-1. Collections: `List, Set, Map` - *keep collection of elements*
-1. `[Type] [name] = [value] [;]` - to define a variable, e.g. `String name = 'engineer';`
-1. Use math operators: `+,-,*,/` - *for numeric operations*
-1. Use `+` - *sign to concatenate strings*
-1. Use logical *or, and* `||, &&` - *for boolean algebra*
-1. Use `if-else if` to control flow of your program
-1. Use `for and while loops` to iterate over collections or until condition
 
 ***
 
@@ -83,7 +71,20 @@ Using special words: *break* and *continue* you can either complete the loop imm
 1. Use lowerCcamelCase for variable names  
 `studentsCount, not StudentsCount/STUDENTScount`
 
-# Additional Reading
+## Cheat Sheet
+1. Primitve Types: `Boolean, String, Integer, Double` - *keep simple values*
+1. Collections: `List, Set, Map` - *keep collection of elements*
+1. `[Type] [name] = [value] [;]` - to define a variable, e.g. `String name = 'engineer';`
+1. Use math operators: `+,-,*,/` - *for numeric operations*
+1. Use `+` - *sign to concatenate strings*
+1. Use logical *or, and* `||, &&` - *for boolean algebra*
+1. Use `if-else,if` to control flow of your program
+1. Use `for` and `while` loops to iterate over collections or until condition
+1. Use `break` and `continue` to control loops immedieatly
+
+***
+
+# Extra Readings
 * [Enums](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_enums.htm)
 * [Constants](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_constants.htm)
 * [Switch statement](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_switch.htm)
