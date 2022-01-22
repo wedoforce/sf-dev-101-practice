@@ -70,9 +70,13 @@ Good commit messages:
 
 ## Cheat Sheet
 
-:notebook: `I want to have a cheat sheet/data sheet at the end to get back to it anytime`
-
-1. ...
+1. Clone repo to local machine: `git clone <repo url> [<folder name>]`
+1. Create a branch and switch to it: `git checkout -b <branch name>`
+1. Stage changes for commit: `git add <path to file/folder>`
+1. Stage all tracked changes: `git add -u`
+1. Staged all changes including untracked: `git add .`
+1. Create a commit: `git commit`
+1. Create a commit with message (without opening and editor): `git commit -m '<your message>'`
 
 ---
 
