@@ -131,6 +131,7 @@ TODO: practice reference
 - [Mastering Collections in Apex](https://developer.salesforce.com/blogs/2021/10/mastering-apex-collections)
 - [Bits, Bytes in machines](https://www.cs.cmu.edu/~ab/15-123S09/lectures/Lecture%2003%20-%20Bits%20Bytes%20and%20Data%20Types.pdf)
   Ignore "C" language specifics and ignore everything after _Writing a Program in C_
+- [Byte Units](https://en.wikipedia.org/wiki/Kilobyte)
 
 ---
 
