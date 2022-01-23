@@ -39,7 +39,7 @@ There are a lot of different ways to use Git. For this course we will use comman
 1. [Pro Git](https://git-scm.com/book/en/v2)
     1. [About version control](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
     1. [What is Git?](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git?)
-1. [Installing Git](#installation)
+1. [Installing Git](/Installation.md)
 1. [Pro Git](https://git-scm.com/book/en/v2)
     1. [First time Git setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
     1. [Getting help](https://git-scm.com/book/en/v2/Getting-Started-Getting-Help)
@@ -94,8 +94,8 @@ Good commit messages:
 To pass the Git-101 challenge you need to get a Pull Request merged into this repo.
 
 Acceptance Criteria:
-TODO: Add new repo with students list
-1. Create a new branch in [this repo]() called `student/<first name>-<last name>`. E.g. `student/nikita-chursin`
+
+1. Create a new branch in [this repo](https://github.com/wedoforce/students) called `student/<first name>-<last name>`. E.g. `student/nikita-chursin`
 1. Pull request (PR) is raised against the `main` branch
 1. The PR contains the file [students/students1.list](stream0/students.list) with a new line added. This line should consist of your first and last names and your email. E.g.: `Nikita Chursin, nikita@salesforcecraft.dev`
 1. Fix any conflicts if they appear
@@ -106,10 +106,7 @@ TODO: Add new repo with students list
 # Extra Readings
 TODO
 
-:notebook: `Sometimes, I did understand everything, but I want to learn more about it - I need extra materials`
-
-- [Extra Reading 1](extrareading1)
-- [...](...)
+- [Pro Git](https://git-scm.com/book/en/v2)
 
 # Additional Resources
 TODO
