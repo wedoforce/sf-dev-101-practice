@@ -63,7 +63,7 @@ Good commit messages:
 * `account hierarchy table lwc`
 * `removed AccountHandler.updateRelatedContacts`
 * ```
-    updates account with sales hierarchu group information
+    updates account with sales hierarchy group information
 
     <a longer description of what and why it does it>
     ```
@@ -84,26 +84,27 @@ Good commit messages:
 
 ### Pre-requisite
 
-:notebook: `I need to understand pre-requisites if it makes sense to jump into practice`
-
-- Knowledge
-  ...
-- Technical
-  - Open terminal (Ctrl/Cmd + Shift + P -> Terminal:Create New Termnial)
-  - Run [prerequisite.sh](./scripts/prerequisite.sh) script in the terminal to be technically ready
-  ```bash
-  ./scripts/prerequisite.sh
-  ```
+- Knowledge: :heavy_check_mark: No special knowledge required
+- Technical: :heavy_exclamation_mark: environment has to be setup
+  - [Install git](/Installation.md)
+  - [Github](https://github.com) account
 
 ### Overview
 
-1. :notebook: `Where are practice tasks`
-1. :notebook: `How to know if I've done the task`
-1. :notebook: `How to troubleshoot`
+To pass the Git-101 challenge you need to get a Pull Request merged into this repo.
+
+Acceptance Criteria:
+TODO: Add new repo with students list
+1. Create a new branch in [this repo]() called `student/<first name>-<last name>`. E.g. `student/nikita-chursin`
+1. Pull request (PR) is raised against the `main` branch
+1. The PR contains the file [students/students1.list](stream0/students.list) with a new line added. This line should consist of your first and last names and your email. E.g.: `Nikita Chursin, nikita@salesforcecraft.dev`
+1. Fix any conflicts if they appear
+1. The PR must be merged to the `main` branch
 
 ---
 
 # Extra Readings
+TODO
 
 :notebook: `Sometimes, I did understand everything, but I want to learn more about it - I need extra materials`
 
@@ -111,6 +112,7 @@ Good commit messages:
 - [...](...)
 
 # Additional Resources
+TODO
 
 :notebook: `To broaden my knowledge`
 
