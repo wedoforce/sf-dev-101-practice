@@ -2,13 +2,13 @@
 
 - **Topics:**
   - [Variables](#variables)
-  - [Conditional Statements](#conditionalstatements)
+  - [Conditional Statements](#conditional-statements)
   - [Loops](#loops)
-- [Best Practices](#bestpractices)
-- [Cheat Sheet](#cheatsheet)
+- [Best Practices](#best-practices)
+- [Cheat Sheet](#cheat-sheet)
 - [Practice](#practice)
-- [Extra Readings](#extrareadings)
-- [Additional Resources](#additionalresources)
+- [Extra Readings](#extra-readings)
+- [Additional Resources](#additional-resources)
 
 ---
 
@@ -129,10 +129,13 @@ TODO: practice reference
 - [Switch statement](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_switch.htm)
 - [Do-While loop](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_loops_do_while.htm)
 - [Mastering Collections in Apex](https://developer.salesforce.com/blogs/2021/10/mastering-apex-collections)
+- [Bits, Bytes in machines](https://www.cs.cmu.edu/~ab/15-123S09/lectures/Lecture%2003%20-%20Bits%20Bytes%20and%20Data%20Types.pdf)
+  Ignore "C" language specifics and ignore everything after _Writing a Program in C_
 
 ---
 
 ## Additional Resources
 
-- TODO: Add information about bits/bytes/how memory is allocated based on variable type
-- TODO: Introduce Heap Limit
+- [Strongly Typed and Weakly Typed languages](https://stackoverflow.com/questions/2690544/what-is-the-difference-between-a-strongly-typed-language-and-a-statically-typed#:~:text=Strongly%20typed%20means%2C%20a%20variable,it%20into%20the%20int%20123%20.)
+- [Simple about heap(in Russian)](https://qna.habr.com/q/843499)
+- [Why Heap?](https://help.salesforce.com/s/articleView?id=000321537&type=1)
