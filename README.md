@@ -1,14 +1,14 @@
 # [Area of the Salesforce Platform] [Aspect of that Area] :notebook: `to correlate with branch name`
 
 - **Topics:**
-  - [Topic 1](#topic1)
-  - [Topic 2](#topic2)
-  - [..](...)
-- [Best Practices](#bestpractices)
-- [Cheat Sheet](#cheatsheet)
+    - [Topic 1](#topic-1)
+    - [Topic 2](#topic-2)
+    - [..](...)
+- [Best Practices](#best-practices)
+- [Cheat Sheet](#cheat-sheet)
 - [Practice](#practice)
-- [Extra Readings](#extrareadings)
-- [Additional Resources](#additionalresources)
+- [Extra Readings](#extra-readings)
+- [Additional Resources](#additional-resources)
 
 ---
 
