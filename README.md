@@ -94,12 +94,13 @@ Good commit messages:
 
 To pass the Git-101 challenge you need to get a Pull Request merged into this repo.
 
+Creating branches, committing changes, and creating Pull Requests is extremely important for the course and for the real development. This is how you would deliver your code to the shared codebase. You'll do it numerouse times during the course and even more when you actually work.
+
 Acceptance Criteria:
 
 1. Create a new branch in [this repo](https://github.com/wedoforce/students) called `student/<first name>-<last name>`. E.g. `student/nikita-chursin`
 1. Pull request (PR) is raised against the `main` branch
-1. The PR contains the file [students/students1.list](stream0/students.list) with a new line added. This line should consist of your first and last names and your email. E.g.: `Nikita Chursin, nikita@salesforcecraft.dev`
-1. Fix any conflicts if they appear
+1. The PR contains the file [students/students1.list](https://github.com/wedoforce/students/students/students1.list) with a new line added. This line should consist of your first and last names and your email. E.g.: `Nikita Chursin,nikita@salesforcecraft.dev`
 1. The PR must be merged to the `main` branch
 
 ---
