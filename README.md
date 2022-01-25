@@ -45,6 +45,7 @@ There are a lot of different ways to use Git. For this course we will use comman
     1. [Getting help](https://git-scm.com/book/en/v2/Getting-Started-Getting-Help)
     1. [Getting a repo](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)
     1. [Recording your change to a repo](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
+1. [Branching](/branching.md)
 
 # Best Practices
 
@@ -104,14 +105,6 @@ Acceptance Criteria:
 ---
 
 # Extra Readings
-TODO
 
 - [Pro Git](https://git-scm.com/book/en/v2)
 
-# Additional Resources
-TODO
-
-:notebook: `To broaden my knowledge`
-
-- [Additional Resource 1](addittionalresource1)
-- [...](...)
