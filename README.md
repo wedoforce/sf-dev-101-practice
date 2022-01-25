@@ -1,14 +1,12 @@
 # Git 101
 
 - **Topics:**
-  - [Topic 1](#topic1)
-  - [Topic 2](#topic2)
-  - [..](...)
-- [Best Practices](#bestpractices)
-- [Cheat Sheet](#cheatsheet)
+  - [Version Control System](#version-control-system)
+  - [Git](#git)
+- [Best Practices](#best-practices)
+- [Cheat Sheet](#cheat-sheet)
 - [Practice](#practice)
-- [Extra Readings](#extrareadings)
-- [Additional Resources](#additionalresources)
+- [Extra Readings](#extra-readings)
 
 ---
 
