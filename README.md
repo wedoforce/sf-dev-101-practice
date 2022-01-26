@@ -34,9 +34,11 @@
         - Database interactions
             - SOQL
             - DML
-            - Dynamic SOQL?
-            - Triggers?
         - Testing
+        - LWC Introduction 
+            - HTML, JS
+            - apex interactions
+            - Jest Testing
     - Salesforce Administration
         - Object-level-security
             - Profiles
@@ -48,16 +50,9 @@
             - sharing rules
             - Apex managed sharing
     - Basic Salesforce Applications (How to create app)
-- Working in pairs
-    -
-    - Ping Pong ...
-    - LWC Introduction 
-        - HTML, JS
-        - apex interactions
-        - Jest Testing
-    - Developing Salesforce App
 - Team work (Final Project)
     - 
+    - Patterns, Layers
     - Agile introduction
         - Scrum, Kanban
         - Planning & Estimation
