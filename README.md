@@ -49,7 +49,8 @@
             - role hierarchies
             - sharing rules
             - Apex managed sharing
-    - Basic Salesforce Applications (How to create app)
+    - Basic Salesforce Applications And Automation
+        - Flow
 - Team work (Final Project)
     - 
     - Patterns, Layers
