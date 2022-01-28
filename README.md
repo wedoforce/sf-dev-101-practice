@@ -23,23 +23,25 @@
             - Collection data types (List, Set, Map)
         - Operations with variables
         - Loops (for, while)
-        - OOP
-            - Classes and methods
-            - Class Access Modifiers
-            - Objects
-            - Encapsulation
-            - Polymorphism
-            - Inheritance
-            - Abstraction
-        - Database interactions
-            - SOQL
-            - DML
-        - Testing
-        - LWC Introduction 
-            - HTML, JS
-            - apex interactions
-            - Jest Testing
-    - Salesforce Administration
+    - OOP
+        - Classes and methods
+        - Class Access Modifiers
+        - Objects
+        - Encapsulation
+        - Polymorphism
+        - Inheritance
+        - Abstraction
+    - Database interactions
+        - SOQL
+        - DML
+    - Triggers
+    - Async Apex
+        - Future methods
+        - Queueable 
+        - Batch Job
+        - Scheduled Job
+    - Testing
+    - Salesforce Security Model
         - Object-level-security
             - Profiles
             - Permission sets
@@ -49,7 +51,11 @@
             - role hierarchies
             - sharing rules
             - Apex managed sharing
-    - Basic Salesforce Applications And Automation
+    - LWC Introduction 
+        - HTML, JS
+        - apex interactions
+    - Jest Testing
+    - Salesforce Declarative Coding
         - Flow
 - Team work (Final Project)
     - 
@@ -61,3 +67,7 @@
         - Retrospective
     - Working with team on one big project
     - Using best practices 
+        - Team convention
+        - Code style
+    - CI/CD
+    - REST
