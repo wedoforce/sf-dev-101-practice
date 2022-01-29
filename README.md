@@ -2,13 +2,7 @@
 
 - **Topics:**
   - [Visual Studio Code](#vscode)
-  - [Conditional Statements](#conditionalstatements)
-  - [Loops](#loops)
-- [Best Practices](#bestpractices)
-- [Cheat Sheet](#cheatsheet)
 - [Practice](#practice)
-- [Extra Readings](#extra-readings)
-- [Additional Resources](#additional-resources)
 
 ---
 
