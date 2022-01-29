@@ -114,9 +114,17 @@ Using special words: _break_ and _continue_ you can either complete the loop imm
 
 ### Overview
 
-TODO: practice reference
+Begin with the warm-up scripts to play with the concepts(open file, then Ctrl/Cmd + Shift + P > Apex: Execute Anonymous)
 
-1. :notebook: `Where are practice tasks`
+1. [variables.apex](./scripts/warmup/1.variables.apex)
+1. [math.apex](./scripts/warmup/2.math.apex)
+1. [collections.apex](./scripts/warmup/3.collections.apex)
+1. [loops.apex](./scripts/warmup/4.loops.apex)
+
+Check program output and try to match what you see in the code vs. output
+
+Once you are comfortable with the concept, jump into real tasks located under _force-app/main/default/classes/tasks_ folder
+
 1. :notebook: `How to know if I've done the task`
 1. :notebook: `How to troubleshoot`
 
