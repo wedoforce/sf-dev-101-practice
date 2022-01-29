@@ -1,7 +1,6 @@
 {
   "orgName": "SF Dev",
   "edition": "Developer",
-  "features": ["EnableSetPasswordInApi"],
   "language": "en_US",
   "settings": {
     "lightningExperienceSettings": {
