@@ -1,5 +1,7 @@
 # WeDoForce: Junior Dev
 
+[Course overview](https://github.com/wedoforce/sf-dev-101-practice/tree/course-overview)
+
 ## Week 1
 
 **Dates**: Jan 31st 2022 - Feb 6th 2022
