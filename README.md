@@ -12,3 +12,6 @@ If you have any organizational questions - please visit [FAQ](/FAQ.md) before as
 - [Environment setup](https://github.com/wedoforce/sf-dev-101-practice/tree/lessons/environment-check)
 - [Git 101](https://github.com/wedoforce/sf-dev-101-practice/tree/lessons/git-101)
 
+**Feedback**
+Please complete [this feedback](https://forms.gle/5sZrESPoitxnGAKC7) form by Monday
+
