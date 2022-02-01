@@ -24,16 +24,14 @@ It is quite popular among Salesforce Developers as well.
    1. [Install Java 11](https://adoptium.net/?variant=openjdk11&jvmVariant=hotspot)
    1. [Install VS Code](https://code.visualstudio.com/download)
 1. [Install Node JS](https://nodejs.org/en/)
-1. Install Git Bash :heavy*check_mark: this should have been done by now based on \_lessons/git-101*
+1. Install Git Bash :heavy_check_mark: this should have been done by now based on \_lessons/git-101*
 1. Configure VS Code to use git bash as the [default terminal](https://dev.to/andrewriveradev/how-to-set-git-bash-as-integrated-terminal-in-vscode-2k31)
 1. Install SFDX-CLI :heavy_check_mark: this should have been done by now.  
    You could check by running `sfdx version` in Git Bash terminal.  
    If it is not installed, the easiest is to install it as a Node JS Package:
-
-```bash
-npm i -g sfdx-cli
-```
-
+   ```bash
+   npm i -g sfdx-cli
+   ```
 1. [Connect your DEV Hub Org](https://trailhead.salesforce.com/en/content/learn/projects/quick-start-salesforce-dx/set-up-your-salesforce-dx-environment):heavy_check_mark: this should have been done by now, if not - just follow the instructions under the link.
 
 ---
