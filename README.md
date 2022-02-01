@@ -2,6 +2,8 @@
 
 [Course overview](https://github.com/wedoforce/sf-dev-101-practice/tree/course-overview)
 
+If you have any organizational questions - please visit [FAQ](/FAQ.md) before asking.
+
 ## Week 1
 
 **Dates**: Jan 31st 2022 - Feb 6th 2022
