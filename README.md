@@ -111,6 +111,6 @@ Acceptance Criteria:
 # Extra Readings
 
 - [Pro Git](https://git-scm.com/book/en/v2)
-- [GitHowTo](https://githowto.com/) lessons 1-8
-- [Learn Git Bracnhing](https://learngitbranching.js.org) - Introduction Sequence 1-2
+- [GitHowTo](https://githowto.com/)
+- [Learn Git Bracnhing](https://learngitbranching.js.org)
 
