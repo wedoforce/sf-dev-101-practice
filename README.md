@@ -66,18 +66,21 @@ Good commit messages:
 * ```
     updates account with sales hierarchy group information
 
-    <a longer description of what and why it does it>
+    (a longer description of what and why it does it)
     ```
+4. Pull requests are usually named after the task. For the practice task you can name it after yourself :)
+5. Best practice is to add a small descrition to a pull request. It may explain what change you did exactly or contain a summary of all your commits.
 
 ## Cheat Sheet
 
-1. Clone repo to local machine: `git clone <repo url> [<folder name>]`
+1. Clone repo to local machine: `git clone <repo url> (<folder name>)`
 1. Create a branch and switch to it: `git checkout -b <branch name>`
 1. Stage changes for commit: `git add <path to file/folder>`
 1. Stage all tracked changes: `git add -u`
 1. Staged all changes including untracked: `git add .`
 1. Create a commit: `git commit`
 1. Create a commit with message (without opening and editor): `git commit -m '<your message>'`
+1. Send changes to the remote repo: `git push`
 
 ---
 
