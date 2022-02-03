@@ -9,8 +9,8 @@ If you have any organizational questions - please visit [FAQ](/FAQ.md) before as
 **Dates**: Jan 31st 2022 - Feb 6th 2022
 
 **Lessons**:
-- [Environment setup](https://github.com/wedoforce/sf-dev-101-practice/tree/lessons/environment-check)
-- [Git 101](https://github.com/wedoforce/sf-dev-101-practice/tree/lessons/git-101)
+- [Environment setup](https://github.com/wedoforce/sf-dev-101-practice/tree/lessons/environment-check) - deadline: Feb 6th
+- [Git 101](https://github.com/wedoforce/sf-dev-101-practice/tree/lessons/git-101) - deadline: Feb 6th
 
 **Feedback**
 
