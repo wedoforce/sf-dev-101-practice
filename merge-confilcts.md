@@ -16,7 +16,7 @@ Ah, so you face a merge conflict!
 
 ### The Quickest Draw in the Wild West
 
-Merge conflict is an indication, that you and your teammate have mande conflicting changes to the same file, but your teammate has already merged their changes.
+Merge conflict is an indication, that you and your teammate have made conflicting changes to the same file, but your teammate has already merged their changes.
 
 ### Help me, Obi-Wan Kenobi, you're my only hope
 
