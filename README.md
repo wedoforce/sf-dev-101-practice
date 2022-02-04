@@ -14,5 +14,5 @@ If you have any organizational questions - please visit [FAQ](/FAQ.md) before as
 
 **Feedback**
 
-Please complete [this feedback](https://forms.gle/5sZrESPoitxnGAKC7) form by Monday
+Please complete [this feedback](https://forms.gle/2cGmmYAPSSSQnMo38) form by Monday
 
