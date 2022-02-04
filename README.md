@@ -113,4 +113,5 @@ Acceptance Criteria:
 - [Pro Git](https://git-scm.com/book/en/v2)
 - [GitHowTo](https://githowto.com/)
 - [Learn Git Bracnhing](https://learngitbranching.js.org)
+- [Image explaining how git repo works](https://github.com/wedoforce/sf-dev-101-practice/blob/lessons/git-101/git_repo_schema.png)
 
