@@ -128,6 +128,10 @@ Check program output and try to match what you see in the code vs. output. There
 
 Once you are comfortable with the concept, jump into real tasks located under _force-app/main/default/classes/tasks_ folder
 
+1. :notebook: Create a branch for the lesson and switch to it: lessons/githubusername/apex-basics-101  
+   You will be working in your personal branch during the practice.
+1. Each \*.cls file contains comments of what is expected during the practice (write code)
+1. Do not be afraid - git controls everything, you can always reset your branch to initial state (recall git-101)
 1. :notebook: `How to know if I've done the task`
    1. push source to your default scratch org using SFDX CLI once implementation is ready for a single challenge. From Terminal:
       ```bash
@@ -137,6 +141,7 @@ Once you are comfortable with the concept, jump into real tasks located under _f
       ```bash
       sfdx force:apex:test:run -n BasicTasksTest -r human
       ```
+      It is ok a lot of tests will fail in the beginning - your goal is to write the code to make the tests pass.
 1. :notebook: `How to troubleshoot`
    1. on source push, salesforce will check compiliation and highlight exact lines to address, e.g.
       ```bash
@@ -151,6 +156,8 @@ Once you are comfortable with the concept, jump into real tasks located under _f
       BasicTasksTest.testSumIntegers         Fail     System.AssertException: Assertion Failed: 3 + 15: Expected: 18, Actual: 0
                                                 Class.BasicTasksTest.testSumIntegers: line 11, column
       ```
+1. :notebook: Once you are done - raise a PR into the lesson branch: lessons/apex-basics-101.  
+   Final validation will be automatically done and you'll see a green check in github if everything is ok.
 
 ---
 
