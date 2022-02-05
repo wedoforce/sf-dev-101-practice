@@ -24,7 +24,7 @@ public class BasicTasks {
   public static Decimal mathPower(Integer a, Integer n) {
     //write your code below this line
     Decimal result = 0;
-    myResult;
+
     return result;
     //write your code above this line
   }
