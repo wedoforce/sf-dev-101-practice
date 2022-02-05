@@ -24,7 +24,7 @@ echo ""
 
 
 echo "Checking SFDX CLI version.."
-sfdx --version
+npm -g ls sfdx-cli
 if (( $? != 0 )); then
     echo ""
     echo "SFDX CLI Check Failed";
