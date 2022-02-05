@@ -47,3 +47,8 @@ for(Integer i = 0; i < 100; i++) {
 }
 Integer random = (Integer) (Math.random() * squaresForIntegers.size());
 System.debug('Square for random stored square ' + random + ' is: ' + squaresForIntegers.get(random));
+
+System.debug('\n\nThink about:');
+System.debug('1)Why do we need 2 types of \'for\' loops?');
+System.debug('2)How to stop loop immediately?');
+System.debug('3)Think of a loop example which can be described through \'while\' but not through \'for\'?');

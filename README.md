@@ -40,6 +40,7 @@ In other words, you won't be able to pass information between different pieces o
 1. **Operators**
    1. [Operations with variables](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_expressions_operators_understanding.htm)
    1. [Operations precedence](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_expressions_operators_precedence.htm)
+1. [Additional math calculations](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_methods_system_math.htm)
 1. [Numeric types conversion](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_rules_of_conversion.htm)
 
 ## Conditional Statements
@@ -78,10 +79,10 @@ Using special words: _break_ and _continue_ you can either complete the loop imm
 
 1. Initialize variables, if possible, to avoid program failures due to **null**.
 1. Pick Up proper Data Types  
-   `Integer studentsCount, not Dobule studentsCount`
+   `Integer studentsCount, not Double studentsCount`
 1. Give descriptive names  
    `Integer studentsCount, not Integer count`
-1. Use lowerCcamelCase for variable names  
+1. Use lowerCamelCase for variable names  
    `studentsCount, not StudentsCount/STUDENTScount`
 
 ---
@@ -121,12 +122,33 @@ Begin with the warm-up scripts to play with the concepts(open file, then Ctrl/Cm
 1. [collections.apex](./scripts/warmup/3.collections.apex)
 1. [loops.apex](./scripts/warmup/4.loops.apex)
 
-Check program output and try to match what you see in the code vs. output
+Check program output and try to match what you see in the code vs. output. There are additional questions to think of.
 
 Once you are comfortable with the concept, jump into real tasks located under _force-app/main/default/classes/tasks_ folder
 
 1. :notebook: `How to know if I've done the task`
+   1. push source to your default scratch org using SFDX CLI. From Terminal:
+      ```bash
+      sfdx force:source:push
+      ```
+   1. run the Task tests against your default scratch org using SFDX CLI. From Terminal(e.g. for BasicTasksTest checks):
+      ```bash
+      sfdx force:apex:test:run -n BasicTasksTest -r human
+      ```
 1. :notebook: `How to troubleshoot`
+   1. on source push, salesforce will check compiliation and highlight exact lines to address, e.g.
+      ```bash
+      === Deploy Errors
+      PROJECT PATH                                         ERRORS
+      ───────────────────────────────────────────────────  ────────────────────────────────────────
+      force-app/main/default/classes/tasks/BasicTasks.cls  Variable does not exist: myResult (26:5)
+      ```
+      means there is an issue in file BasicTasks.cls on line 26, column 5
+   1. on test failure, salesforce will highlight exact issue: expected vs. actual - use test details to check you logic, e.g.
+      ```bash
+      BasicTasksTest.testSumIntegers         Fail     System.AssertException: Assertion Failed: 3 + 15: Expected: 18, Actual: 0
+                                                Class.BasicTasksTest.testSumIntegers: line 11, column
+      ```
 
 ---
 

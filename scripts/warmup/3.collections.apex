@@ -53,3 +53,11 @@ System.debug('Currency Rates: ' + ccyRate);
 System.debug('Currency Rates for JPY: ' + ccyRate.get('JPY'));
 System.debug('Currency Rates for USD: ' + ccyRate.get('USD'));
 System.debug('Currency Rates for EUR/USD: ' + ccyRate.get('EUR') / ccyRate.get('USD'));
+
+System.debug('\n\nThink about:');
+System.debug('1)What are the benefits of List over Set and Set over List?');
+System.debug('2)Both List and Map have get method - why the 2 collections then? Can we have just one of them');
+System.debug('3)I do not want to have \'ABC\' string in a Set<String>');
+System.debug('\tHow to check if it is there or not?');
+System.debug('\tHow to check and remove it from the Set if it is there with a single command?');
+System.debug('4)How to emulate a 2 dimensional array in Apex through List?');
