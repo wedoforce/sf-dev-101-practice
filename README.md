@@ -98,6 +98,8 @@ Using special words: _break_ and _continue_ you can either complete the loop imm
 1. Use `if-else,if` to control flow of your program
 1. Use `for` and `while` loops to iterate over collections or until condition
 1. Use `break` and `continue` to control loops immedieatly
+1. Use `sfdx force:source:push` to deploy your code to your scratch org
+1. Use `sfdx force:apex:test:run -n CollectionsTasksTest -r human` to run tests in your scratch org
 
 ---
 
@@ -127,7 +129,7 @@ Check program output and try to match what you see in the code vs. output. There
 Once you are comfortable with the concept, jump into real tasks located under _force-app/main/default/classes/tasks_ folder
 
 1. :notebook: `How to know if I've done the task`
-   1. push source to your default scratch org using SFDX CLI. From Terminal:
+   1. push source to your default scratch org using SFDX CLI once implementation is ready for a single challenge. From Terminal:
       ```bash
       sfdx force:source:push
       ```
