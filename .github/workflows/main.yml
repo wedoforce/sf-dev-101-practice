@@ -25,7 +25,7 @@ jobs:
       # setup sfdx using action
       - uses: sfdx-actions/setup-sfdx@v1
         with:
-          sfdx-auth-url: force://PlatformCLI::5Aep861wJWHSPwPUn0i05.Gaol_DhTzcBVKXLKP0WkrcMN.YIGC_di1SCb5HYE18.7uvf0CGyvNtDMTJCt_YQ8l@agility-ability-2333-dev-ed.cs129.my.salesforce.com
+          sfdx-auth-url: ${{ secrets.LESSON_APEX_BASICS_101_AUTH_SECRET }}
 
       # Check deploy with single test run
       - name: Test Apex Tank Candidate
