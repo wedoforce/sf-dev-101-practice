@@ -84,6 +84,9 @@ Using special words: _break_ and _continue_ you can either complete the loop imm
    `Integer studentsCount, not Integer count`
 1. Use lowerCamelCase for variable names  
    `studentsCount, not StudentsCount/STUDENTScount`
+1. Read "Clean Code" by Robert C. Martin
+   1. Chapter 1
+   1. Chapter 2 till "Avoid Mental Mapping" inclusive
 
 ---
 
