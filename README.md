@@ -117,6 +117,27 @@ Using special words: _break_ and _continue_ you can either complete the loop imm
   ```bash
   ./scripts/prerequisite.sh
   ```
+- Scratch Orgs:  
+  The above script will setup a Scratch Org for you. You can read about Scratch Orgs in this [unit](https://trailhead.salesforce.com/content/learn/modules/sfdx_app_dev/sfdx_app_dev_setup_dx).
+
+  You can treat Scratch Org as a brand new empty instance of Salesforce - it will have no data, only metadata.  
+  Scratch Orgs are temporal orgs with life time varying between 1 day and 30 days(defined during Scratch Org creation, 7 days by default).  
+  In order to create Scratch Orgs, you will need to register a special org - Dev Hub Org. (Should have been done already as part of [this unit](https://trailhead.salesforce.com/content/learn/modules/sfdx_app_dev/sfdx_app_dev_setup_dx).)
+
+  With Trailhead Playground enabled as Dev Hub org, you can have up to 3 active Scratch Orgs.  
+  If you do not need a Scratch Org or would like to start from Scratch - you can delete the "old" Scratch Org any time.  
+  During the rolling 24 hours, you can create and dispose up to 6 Scratch Orgs, so be carefull.
+
+  In order to execute Apex Code you need a Cloud environment - an Org. Scratch Org will be your cloud environment.  
+  However, you'll be using VS Code to create the code.
+
+  Code can be executed in many ways in the Cloud environment:
+
+  - Anonyomous: code will get deployed and executed immediately - you'll use it for warm up.  
+    This is useful, when you do not need the code to be available in the Org and just need the logic to get executed.
+  - Through Test: code will get deployed and executed via a Test Run - you'll use it for practice validation.  
+    This is quite often during development/implementation phases.  
+    Usually, the code is deployed along with the test code. Then, special command starts the specified tests.
 
 ### Overview
 
