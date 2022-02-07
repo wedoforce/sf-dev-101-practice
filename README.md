@@ -16,3 +16,14 @@ If you have any organizational questions - please visit [FAQ](/FAQ.md) before as
 
 Please complete [this feedback](https://forms.gle/2cGmmYAPSSSQnMo38) form by Monday
 
+## Week 2
+
+**Dates**: Feb 7th 2022 - Feb 13th 2022
+
+**Lessons**:
+- [Apex Basics 101](https://github.com/wedoforce/sf-dev-101-practice/tree/lessons/apex-basics-101) - deadline: Feb 13th
+
+**Feedback**
+
+Link will be provided soon
+
