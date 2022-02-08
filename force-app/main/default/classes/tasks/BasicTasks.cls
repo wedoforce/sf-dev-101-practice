@@ -7,7 +7,9 @@ public with sharing class BasicTasks {
   public static Long sumIntegers(Integer a, Integer b) {
     // ignore public static.. Focus on variables
     //write your code below this line
-    Long sum = a + b;
+    Long a1 = a;
+    Long b1 = b;
+    Long sum = (a1 + b1);
     return sum;
     //write your code above this line
   }
