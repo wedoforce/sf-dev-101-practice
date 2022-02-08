@@ -1,10 +1,13 @@
-public class BasicTasks {
+/**
+ * Created by squar on 08.02.2022.
+ */
+
+public with sharing class BasicTasks {
   // Implement sum 2 Integers calculator, e.g. a = 3, b = 5; then result should be 8
   public static Long sumIntegers(Integer a, Integer b) {
     // ignore public static.. Focus on variables
     //write your code below this line
-    Integer sum = 0;
-
+    Long sum = a + b;
     return sum;
     //write your code above this line
   }
@@ -15,6 +18,26 @@ public class BasicTasks {
     //write your code below this line
     Double result = 0;
 
+    switch on operator {
+      when '+' {
+        result = a + b;
+      }
+      when '-' {
+        result = a - b;
+      }
+      when '*' {
+        result = a * b;
+      }
+      when '/' {
+        if (b <> 0) {
+          result = a / b;
+        }
+      }
+      when else {
+        System.debug('operator out of task');
+      }
+    }
+
     return result;
     //write your code above this line
   }
@@ -24,7 +47,17 @@ public class BasicTasks {
   public static Decimal mathPower(Integer a, Integer n) {
     //write your code below this line
     Decimal result = 0;
+    if (n == 0) {
+      result = 1;
+    } else {
+      result = a;
+      while (n > 1) {
+        result *= a;
+        n--;
+      }
+    }
 
+    System.debug(a + ' ^ ' + n + ' = ' + result);
     return result;
     //write your code above this line
   }
