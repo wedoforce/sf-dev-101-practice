@@ -151,7 +151,7 @@ Begin with the warm-up scripts to play with the concepts(open file, then Ctrl/Cm
 
 Check program output and try to match what you see in the code vs. output. There are additional questions to think of.
 
-Once you are comfortable with the concept, jump into real tasks located under [`force-app/main/default/classes/tasks`](tree/lessons/apex-basics-101/force-app/main/default/classes/tasks) folder
+Once you are comfortable with the concept, jump into real tasks located under [`force-app/main/default/classes/tasks`](https://github.com/wedoforce/sf-dev-101-practice/tree/lessons/apex-basics-101/force-app/main/default/classes/tasks) folder
 
 1. :notebook: Create a branch for the lesson and switch to it: lessons/githubusername/apex-basics-101  
    You will be working in your personal branch during the practice.
