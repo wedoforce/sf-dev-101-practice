@@ -141,7 +141,8 @@ Using special words: _break_ and _continue_ you can either complete the loop imm
 
 ### Overview
 
-Begin with the warm-up scripts to play with the concepts(open file, then Ctrl/Cmd + Shift + P > Apex: Execute Anonymous)
+Begin with the warm-up scripts to play with the concepts(open file, then Ctrl/Cmd + Shift + P > Apex: Execute Anonymous)  
+:heavy_check_mark: If Apex: Execute Anonymous is not available -> try to install [JosephAllen](https://marketplace.visualstudio.com/items?itemName=JosephAllen.apex-code-runner) extension manually.
 
 1. [variables.apex](./scripts/warmup/1.variables.apex)
 1. [math.apex](./scripts/warmup/2.math.apex)
