@@ -5,7 +5,7 @@ public class BasicTasks {
     //write your code below this line
     Integer sum = 0;
 
-    return sum;
+    return -1;
     //write your code above this line
   }
 
