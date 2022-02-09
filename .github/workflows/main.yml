@@ -28,10 +28,10 @@ jobs:
       # setup sfdx using action
       - uses: sfdx-actions/setup-sfdx@v1
         with:
-          sfdx-auth-url: ${{ secrets.LESSON_APEX_BASICS_101_AUTH_SECRET }}
+          sfdx-auth-url: ${{ secrets.SCRATCH_ORG_FOR_2_WEEKS }}
 
       # Check deploy with single test run
       - name: Test Apex Tank Candidate
         run: |
-          sfdx force:source:deploy -c -l RunSpecifiedTests -r BasicTasksTest,CollectionsTasksTest \
+          sfdx force:source:deploy -c -l RunSpecifiedTests -r ListOfTestsViaComma \
           -p force-app/main/default/classes --verbose
