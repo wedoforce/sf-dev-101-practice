@@ -38,7 +38,7 @@ public class CollectionsTasks {
         Integer comp2 = 0;
         comp1 = listWithElementsToCheck[i];
         comp2 = listWithElementsToCheck[j];
-        if (sum == comp1 + commp2) {
+        if (sum == comp1 + comp2) {
           result = true;
         }
       }
