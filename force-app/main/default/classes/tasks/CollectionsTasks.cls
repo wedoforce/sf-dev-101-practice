@@ -34,16 +34,20 @@ public class CollectionsTasks {
     Boolean result = false;
     for (Integer i = 0; i < listWithElementsToCheck.size(); i++) {
       for (Integer j = 0; j < listWithElementsToCheck.size(); j++) {
-        Integer comp1 = 0;
-        Integer comp2 = 0;
-        comp1 = listWithElementsToCheck[i];
-        comp2 = listWithElementsToCheck[j];
-        if (sum == comp1 + comp2) {
-          result = true;
+        if (i <> j) {
+          Integer comp1 = 0;
+          Integer comp2 = 0;
+          Integer intRes;
+          comp1 = listWithElementsToCheck[i];
+          comp2 = listWithElementsToCheck[j];
+          intRes = comp1 + comp2;
+          if (sum == intRes) {
+            result = true;
+          }
         }
       }
     }
-    return false;
+    return result;
   }
 
   // use single loop and an arbitrary collection to address same requirements as in sumCanBeReached
