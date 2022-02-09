@@ -34,4 +34,4 @@ jobs:
       - name: Test Apex Tank Candidate
         run: |
           sfdx force:source:deploy -c -l RunSpecifiedTests -r BasicTasksTest,CollectionsTasksTest \
-          -p force-app/main/default/classes/tasks --verbose
+          -p force-app/main/default/classes --verbose
