@@ -1,3 +1,10 @@
+/**
+ * @description       :
+ * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+ * @group             :
+ * @last modified on  : 02-09-2022
+ * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+ **/
 public class CollectionsTasks {
   // elements in listWithZerosAndUnits can be of 2 values only: 0 or 1
   // implement count number of zeros in the List with a loop
@@ -6,7 +13,13 @@ public class CollectionsTasks {
   public static Integer countZerosInBitList(
     List<Integer> listWithZerosAndUnits
   ) {
-    return 0;
+    Integer cnt = 0;
+    for (Integer i : listWithZerosAndUnits) {
+      if (i == 0) {
+        cnt++;
+      }
+    }
+    return cnt;
   }
 
   // check if it is possible to add any 2 elements from the listWithElementsToCheck to get the sum
