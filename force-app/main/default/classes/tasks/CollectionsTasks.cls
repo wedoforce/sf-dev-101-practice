@@ -81,6 +81,14 @@ public class CollectionsTasks {
     List<String> codeTicks,
     List<Integer> priceTicks
   ) {
-    return 0;
+    Integer resPriceTick;
+    for (Integer i = codeTicks.size() - 1; i >= 0; i--) {
+      if (codeTicks[i] == stock) {
+        System.debug('I= ' + i);
+        resPriceTick = priceTicks[i];
+        return resPriceTick;
+      }
+    }
+    return resPriceTick;
   }
 }
