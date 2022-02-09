@@ -31,6 +31,18 @@ public class CollectionsTasks {
     Integer sum,
     List<Integer> listWithElementsToCheck
   ) {
+    Boolean result = false;
+    for (Integer i = 0; i < listWithElementsToCheck.size(); i++) {
+      for (Integer j = 0; j < listWithElementsToCheck.size(); j++) {
+        Integer comp1 = 0;
+        Integer comp2 = 0;
+        comp1 = listWithElementsToCheck[i];
+        comp2 = listWithElementsToCheck[j];
+        if (sum == comp1 + commp2) {
+          result = true;
+        }
+      }
+    }
     return false;
   }
 
