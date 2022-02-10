@@ -2,7 +2,7 @@
  * @description       :
  * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
  * @group             :
- * @last modified on  : 02-09-2022
+ * @last modified on  : 02-10-2022
  * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
  **/
 public class CollectionsTasks {
@@ -34,16 +34,11 @@ public class CollectionsTasks {
     Boolean result = false;
     for (Integer i = 0; i < listWithElementsToCheck.size(); i++) {
       for (Integer j = 0; j < listWithElementsToCheck.size(); j++) {
-        if (i <> j) {
-          Integer comp1 = 0;
-          Integer comp2 = 0;
-          Integer intRes;
-          comp1 = listWithElementsToCheck[i];
-          comp2 = listWithElementsToCheck[j];
-          intRes = comp1 + comp2;
-          if (sum == intRes) {
-            result = true;
-          }
+        if (
+          i <> j &&
+          listWithElementsToCheck[i] + listWithElementsToCheck[j] == sum
+        ) {
+          result = true;
         }
       }
     }
@@ -55,7 +50,44 @@ public class CollectionsTasks {
     Integer sum,
     List<Integer> listWithElementsToCheck
   ) {
-    return false;
+    Boolean b;
+    Boolean bfin;
+    listWithElementsToCheck.sort();
+    Integer minListMemb = listWithElementsToCheck[0];
+    Integer listSize = listWithElementsToCheck.size();
+    Integer maxListMemb = listWithElementsToCheck[listSize - 1];
+    if (sum > listWithElementsToCheck.size()) {
+      for (Integer i = listWithElementsToCheck.size() - 1; i > 0; i--) {
+        Integer diff = 0;
+        diff = sum - listWithElementsToCheck[i];
+        if (maxListMemb + listWithElementsToCheck[i] < sum) {
+          return false;
+        }
+        b = listWithElementsToCheck.contains(diff);
+        if (b) {
+          //        bfin = true;
+          //        return bfin;
+          return b;
+        }
+      }
+    } else {
+      for (Integer i = 0; i < listWithElementsToCheck.size(); i++) {
+        Integer diff = 0;
+        diff = listWithElementsToCheck[i] - sum;
+        if (diff - sum > 0) {
+          return false;
+        }
+        System.debug('diff >= ' + diff);
+        b = listWithElementsToCheck.contains(diff);
+        if (b) {
+          //        bfin = true;
+          //        return bfin;
+          return b;
+        }
+      }
+    }
+    // return bfin;
+    return b;
   }
 
   // over a trading day stock prices change many times. Stock prices are written into 2 list after every price change:
