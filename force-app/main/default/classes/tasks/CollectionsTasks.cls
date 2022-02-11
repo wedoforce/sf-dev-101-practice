@@ -50,7 +50,7 @@ public class CollectionsTasks {
   ) {
     Boolean b;
     Boolean bfin;
-    // listWithElementsToCheck.sort();
+    listWithElementsToCheck.sort();
     Integer minListMemb = listWithElementsToCheck[0];
     Integer listSize = listWithElementsToCheck.size();
     Integer maxListMemb = listWithElementsToCheck[listSize - 1];
