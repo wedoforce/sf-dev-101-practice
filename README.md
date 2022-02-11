@@ -26,5 +26,3 @@ Please complete [this feedback](https://forms.gle/2cGmmYAPSSSQnMo38) form by Mon
 - [Apex Basics 101](https://github.com/wedoforce/sf-dev-101-practice/tree/lessons/apex-basics-101) - deadline: Feb 13th
 
 **Feedback**
-
-Link will be provided soon
