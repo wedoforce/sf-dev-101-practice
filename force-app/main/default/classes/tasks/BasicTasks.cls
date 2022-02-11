@@ -1,7 +1,10 @@
 /**
- * Created by squar on 08.02.2022.
- */
-
+ * @description       :
+ * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+ * @group             :
+ * @last modified on  : 02-11-2022
+ * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+ **/
 public with sharing class BasicTasks {
   // Implement sum 2 Integers calculator, e.g. a = 3, b = 5; then result should be 8
   public static Long sumIntegers(Integer a, Integer b) {

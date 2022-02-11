@@ -2,7 +2,7 @@
  * @description       :
  * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
  * @group             :
- * @last modified on  : 02-10-2022
+ * @last modified on  : 02-11-2022
  * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
  **/
 public class CollectionsTasks {
@@ -15,10 +15,14 @@ public class CollectionsTasks {
   ) {
     Integer cnt = 0;
     for (Integer i : listWithZerosAndUnits) {
+      /*
       if (i == 0) {
         cnt++;
       }
+      */
+      cnt = cnt + i;
     }
+    cnt = listWithZerosAndUnits.size() - cnt;
     return cnt;
   }
 
@@ -65,8 +69,6 @@ public class CollectionsTasks {
         }
         b = listWithElementsToCheck.contains(diff);
         if (b) {
-          //        bfin = true;
-          //        return bfin;
           return b;
         }
       }
@@ -80,13 +82,10 @@ public class CollectionsTasks {
         System.debug('diff >= ' + diff);
         b = listWithElementsToCheck.contains(diff);
         if (b) {
-          //        bfin = true;
-          //        return bfin;
           return b;
         }
       }
     }
-    // return bfin;
     return b;
   }
 
