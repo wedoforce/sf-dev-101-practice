@@ -1,10 +1,3 @@
-/**
- * @description       :
- * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
- * @group             :
- * @last modified on  : 02-11-2022
- * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
- **/
 public class CollectionsTasks {
   // elements in listWithZerosAndUnits can be of 2 values only: 0 or 1
   // implement count number of zeros in the List with a loop
