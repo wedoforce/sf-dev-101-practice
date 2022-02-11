@@ -49,17 +49,11 @@ public with sharing class BasicTasks {
   public static Decimal mathPower(Integer a, Integer n) {
     //write your code below this line
     Decimal result = 0;
-    if (n == 0) {
-      result = 1;
-    } else {
-      result = a;
-      while (n > 1) {
-        result *= a;
-        n--;
-      }
+    result = 1;
+    while (n > 0) {
+      result *= a;
+      n--;
     }
-
-    System.debug(a + ' ^ ' + n + ' = ' + result);
     return result;
     //write your code above this line
   }
