@@ -43,6 +43,7 @@ public class CollectionsTasks {
           listWithElementsToCheck[i] + listWithElementsToCheck[j] == sum
         ) {
           result = true;
+          break;
         }
       }
     }
@@ -69,7 +70,8 @@ public class CollectionsTasks {
         }
         b = listWithElementsToCheck.contains(diff);
         if (b) {
-          return b;
+          //      return b;
+          break;
         }
       }
     } else {
@@ -82,7 +84,8 @@ public class CollectionsTasks {
         System.debug('diff >= ' + diff);
         b = listWithElementsToCheck.contains(diff);
         if (b) {
-          return b;
+          //         return b;
+          break;
         }
       }
     }
@@ -115,9 +118,9 @@ public class CollectionsTasks {
     Integer resPriceTick;
     for (Integer i = codeTicks.size() - 1; i >= 0; i--) {
       if (codeTicks[i] == stock) {
-        System.debug('I= ' + i);
         resPriceTick = priceTicks[i];
-        return resPriceTick;
+        //       return resPriceTick;
+        break;
       }
     }
     return resPriceTick;
