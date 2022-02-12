@@ -6,8 +6,14 @@ public class CollectionsTasks {
   public static Integer countZerosInBitList(
     List<Integer> listWithZerosAndUnits
   ) {
-    return 0;
+    Integer cnt = 0;
+    for (Integer i : listWithZerosAndUnits) {
+      cnt += i;
+    }
+    cnt = listWithZerosAndUnits.size() - cnt;
+    return cnt;
   }
+
 
   // check if it is possible to add any 2 elements from the listWithElementsToCheck to get the sum
   // use loops inside loop to iterate over list to get any 2 elements from the list
@@ -18,8 +24,21 @@ public class CollectionsTasks {
     Integer sum,
     List<Integer> listWithElementsToCheck
   ) {
-    return false;
+    Boolean result = false;
+    for (Integer i = 0; i < listWithElementsToCheck.size(); i++) {
+      for (Integer j = 0; j < listWithElementsToCheck.size(); j++) {
+        if (
+          i <> j &&
+          listWithElementsToCheck[i] + listWithElementsToCheck[j] == sum
+        ) {
+          result = true;
+          break;
+        }
+      }
+    }
+    return result;
   }
+
 
   // use single loop and an arbitrary collection to address same requirements as in sumCanBeReached
   public static Boolean sumCanBeReachedOptimal(
@@ -52,6 +71,13 @@ public class CollectionsTasks {
     List<String> codeTicks,
     List<Integer> priceTicks
   ) {
-    return 0;
+    Integer resPriceTick;
+    for (Integer i = codeTicks.size() - 1; i >= 0; i--) {
+      if (codeTicks[i] == stock) {
+        resPriceTick = priceTicks[i];
+        break;
+      }
+    }
+    return resPriceTick;
   }
 }
