@@ -3,10 +3,17 @@ public class CollectionsTasks {
   // implement count number of zeros in the List with a loop
   // e.g. {0, 0, 0, 1} => 3; {1, 1, 0, 0, 1} => 2;
   // *can you implement it without checking the value/without if statement?
-  public static Integer countZerosInBitList(
-    List<Integer> listWithZerosAndUnits
-  ) {
-    return 0;
+  public static Integer countZerosInBitList( List<Integer> listWithZerosAndUnits) {
+    
+    Integer result = 0;
+
+    for(Integer i : listWithZerosAndUnits){
+      if(i == 0) {
+        result++;
+      }
+    }
+
+    return result;
   }
 
   // check if it is possible to add any 2 elements from the listWithElementsToCheck to get the sum
@@ -18,6 +25,14 @@ public class CollectionsTasks {
     Integer sum,
     List<Integer> listWithElementsToCheck
   ) {
+
+    for(Integer i = 0; i < listWithElementsToCheck.size()-1; i++) {
+      for(Integer j = i;  j < listWithElementsToCheck.size(); j++) {
+        if(listWithElementsToCheck[i] + listWithElementsToCheck[j] == sum){
+          return true;
+        }
+      }
+    }
     return false;
   }
 
@@ -26,6 +41,28 @@ public class CollectionsTasks {
     Integer sum,
     List<Integer> listWithElementsToCheck
   ) {
+
+    List<Integer> sortedList = new List<Integer>(listWithElementsToCheck);
+    sortedList.sort();
+
+    Integer leftIndex = 0;
+    Integer rightIndex = listWithElementsToCheck.size() - 1;
+
+    while (leftIndex != rightIndex) {
+      Integer currentSum = leftIndex + rightIndex;
+
+      if (currentSum < sum) {
+        leftIndex++;
+      }
+
+      if (currentSum > sum) {
+        rightIndex--;
+      }
+
+      if(currentSum == sum){
+        return true;
+      }
+    }
     return false;
   }
 
@@ -52,6 +89,14 @@ public class CollectionsTasks {
     List<String> codeTicks,
     List<Integer> priceTicks
   ) {
-    return 0;
+
+    Integer result = 0;
+    for(Integer i = codeTicks.size()-1; i >= 0; i--) {
+      if(codeTicks[i] == stock) {
+        result = priceTicks[i];
+        break;
+      }
+    }
+    return result;
   }
 }
