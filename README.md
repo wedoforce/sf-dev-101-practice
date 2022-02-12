@@ -102,7 +102,7 @@ Using special words: _break_ and _continue_ you can either complete the loop imm
 1. Use `for` and `while` loops to iterate over collections or until condition
 1. Use `break` and `continue` to control loops immedieatly
 1. Use `sfdx force:source:push` to deploy your code to your scratch org
-1. Use `sfdx force:apex:test:run -n CollectionsTasksTest -r human` to run tests in your scratch org
+1. Use `sfdx force:apex:test:run -n "CollectionsTasksTest,BasicTasksTest" -r human` to verify solutions in your scratch org
 
 ---
 
@@ -141,7 +141,7 @@ Using special words: _break_ and _continue_ you can either complete the loop imm
 
 ### Overview
 
-Begin with the warm-up scripts to play with the concepts(open file, then Ctrl/Cmd + Shift + P > Apex: Execute Anonymous)  
+Begin with the warm-up scripts to play with the concepts(open file, then `Ctrl/Cmd + Shift + P > Apex: Execute Anonymous`)  
 :heavy_check_mark: If Apex: Execute Anonymous is not available -> try to install [JosephAllen](https://marketplace.visualstudio.com/items?itemName=JosephAllen.apex-code-runner) extension manually.
 
 1. [variables.apex](./scripts/warmup/1.variables.apex)
@@ -157,6 +157,12 @@ Once you are comfortable with the concept, jump into real tasks located under _f
    You will be working in your personal branch during the practice.
 1. Each \*.cls file contains comments of what is expected during the practice (write code)
 1. Do not be afraid - git controls everything, you can always reset your branch to initial state (recall git-101)
+1. :notebook: `How to test your code`
+   1. push source to your default scratch org using SFDX CLI. From Terminal:
+      ```bash
+      sfdx force:source:push
+      ```
+   1. open [test.apex](./scripts/test/test.apex) where you can modify input parameters and see the output of your logic via `Ctrl/Cmd + Shift + P > Apex: Execute Anonymous`
 1. :notebook: `How to know if I've done the task`
    1. push source to your default scratch org using SFDX CLI once implementation is ready for a single challenge. From Terminal:
       ```bash
@@ -164,10 +170,12 @@ Once you are comfortable with the concept, jump into real tasks located under _f
       ```
    1. run the Task tests against your default scratch org using SFDX CLI. From Terminal(e.g. for BasicTasksTest checks):
       ```bash
-      sfdx force:apex:test:run -n BasicTasksTest -r human
+      sfdx force:apex:test:run -n "CollectionsTasksTest,BasicTasksTest" -r human
       ```
       It is ok a lot of tests will fail in the beginning - your goal is to write the code to make the tests pass.
 1. :notebook: `How to troubleshoot`
+   1. got connection issue on `Apex: Execute Anonymous`  
+      try to execute `Ctrl/Cmd + Shift + P > Apex: Execute Anonymous` to refresh connectivuty to you scrath org
    1. on source push, salesforce will check compiliation and highlight exact lines to address, e.g.
       ```bash
       === Deploy Errors

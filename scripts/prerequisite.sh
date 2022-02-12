@@ -100,7 +100,7 @@ echo ""
 
 echo "Creating Scratch Org for my practice(it may take a while, please wait).."
 echo "sfdx force:org:create -f config/project-scratch-def.json -d 1 -a practice -s"
-sfdx force:org:create -f config/project-scratch-def.json -d 1 -a practice -s
+sfdx force:org:create -f config/project-scratch-def.json -d 30 -a practice -s
 if (( $? != 0 )); then
     echo ""
     echo "Scratch Org creation Failed";
