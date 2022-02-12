@@ -3,8 +3,9 @@ public class BasicTasks {
   public static Long sumIntegers(Integer a, Integer b) {
     // ignore public static.. Focus on variables
     //write your code below this line
-    Integer sum = 0;
-
+    Long a1 = a;
+    Long b1 = b;
+    Long sum = (a1 + b1);
     return sum;
     //write your code above this line
   }
@@ -15,6 +16,25 @@ public class BasicTasks {
     //write your code below this line
     Double result = 0;
 
+    switch on operator {
+      when '+' {
+        result = a + b;
+      }
+      when '-' {
+        result = a - b;
+      }
+      when '*' {
+        result = a * b;
+      }
+      when '/' {
+        if (b <> 0) {
+          result = a / b;
+        }
+      }
+      when else {
+        System.debug('operator out of task');
+      }
+    }
     return result;
     //write your code above this line
   }
@@ -24,7 +44,11 @@ public class BasicTasks {
   public static Decimal mathPower(Integer a, Integer n) {
     //write your code below this line
     Decimal result = 0;
-
+    result = 1;
+    while (n > 0) {
+      result *= a;
+      n--;
+    }
     return result;
     //write your code above this line
   }
