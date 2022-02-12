@@ -4,7 +4,7 @@ public class BasicTasks {
     // ignore public static.. Focus on variables
     //write your code below this line
     Integer sum = 0;
-
+    sum = sum + a * b;
     return sum;
     //write your code above this line
   }
@@ -14,7 +14,20 @@ public class BasicTasks {
   public static Double basicMathCalculate(Double a, Double b, String operator) {
     //write your code below this line
     Double result = 0;
-
+    switch on operator {
+      when '+' {
+        result = a + b;
+      }
+      when '-' {
+        result = a - b;
+      }
+      when '*' {
+        result = a * b;
+      }
+      when '/' {
+        result = a / b;
+      }
+    }
     return result;
     //write your code above this line
   }
@@ -24,7 +37,11 @@ public class BasicTasks {
   public static Decimal mathPower(Integer a, Integer n) {
     //write your code below this line
     Decimal result = 0;
-
+    Integer j = 0;
+    while (j <= n) {
+      result = math.pow(a, n);
+      j++;
+    }
     return result;
     //write your code above this line
   }

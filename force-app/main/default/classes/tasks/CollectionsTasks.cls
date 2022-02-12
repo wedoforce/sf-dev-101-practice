@@ -6,7 +6,13 @@ public class CollectionsTasks {
   public static Integer countZerosInBitList(
     List<Integer> listWithZerosAndUnits
   ) {
-    return 0;
+    integer countZeros = 0;
+    for (Integer element : listWithZerosAndUnits) {
+      if (element == 0) {
+        countZeros++;
+      }
+    }
+    return countZeros;
   }
 
   // check if it is possible to add any 2 elements from the listWithElementsToCheck to get the sum
@@ -18,6 +24,13 @@ public class CollectionsTasks {
     Integer sum,
     List<Integer> listWithElementsToCheck
   ) {
+    for (integer i = 0; i < listWithElementsToCheck.size(); i++) {
+      for (integer j = i + 1; j < listWithElementsToCheck.size(); j++)
+        if (listWithElementsToCheck[i] + listWithElementsToCheck[j] == sum) {
+          return true;
+        }
+      continue;
+    }
     return false;
   }
 
@@ -26,6 +39,12 @@ public class CollectionsTasks {
     Integer sum,
     List<Integer> listWithElementsToCheck
   ) {
+    for (integer element : listWithElementsToCheck) {
+      if (listWithElementsToCheck.contains(sum - element)) {
+        return true;
+      }
+      break;
+    }
     return false;
   }
 
@@ -52,6 +71,16 @@ public class CollectionsTasks {
     List<String> codeTicks,
     List<Integer> priceTicks
   ) {
-    return 0;
+    Integer stockPrice;
+    //if (!codeTicks.isEmpty() && !priceTicks.isEmpty()) {
+    for (integer i = codeTicks.size() - 1; i >= 0; i--) {
+      if (codeTicks[i] == stock) {
+        stockPrice = priceTicks[i];
+        return stockPrice;
+      }
+      break;
+    }
+    //}
+    return stockPrice;
   }
 }
