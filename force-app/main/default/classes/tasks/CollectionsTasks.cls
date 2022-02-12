@@ -45,7 +45,18 @@ public class CollectionsTasks {
     Integer sum,
     List<Integer> listWithElementsToCheck
   ) {
-    return false;
+    Boolean b = false;
+ 
+    //listWithElementsToCheck.sort();
+    Set<Integer>setWithElementsToCheck = new Set<Integer>(listWithElementsToCheck);
+        for (Integer i : setWithElementsToCheck) {
+      if (setWithElementsToCheck.contains(sum-i)) {
+        b=true;
+        break;
+      }  
+
+    }
+    return b;
   }
 
   // over a trading day stock prices change many times. Stock prices are written into 2 list after every price change:
