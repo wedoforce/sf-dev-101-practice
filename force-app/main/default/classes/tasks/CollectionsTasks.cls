@@ -6,7 +6,13 @@ public class CollectionsTasks {
   public static Integer countZerosInBitList(
     List<Integer> listWithZerosAndUnits
   ) {
-    return 0;
+    Integer count;
+    for (Integer i : listWithZerosAndUnits) {
+      if (count == 0) {
+        count++;
+      }
+    }
+    return count;
   }
 
   // check if it is possible to add any 2 elements from the listWithElementsToCheck to get the sum
