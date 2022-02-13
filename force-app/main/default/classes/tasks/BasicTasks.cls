@@ -3,7 +3,7 @@ public class BasicTasks {
   public static Long sumIntegers(Integer a, Integer b) {
     // ignore public static.. Focus on variables
     //write your code below this line
-    Integer sum = 0;
+    Integer sum = a+b;
 
     return sum;
     //write your code above this line
@@ -14,6 +14,15 @@ public class BasicTasks {
   public static Double basicMathCalculate(Double a, Double b, String operator) {
     //write your code below this line
     Double result = 0;
+    If((operator == '+'))                 { result  = a+b;} 
+      Else 
+       if((operator == '-'))               {result  = a-b;}
+       Else 
+        if((operator == '*' ))             {result  = a*b;}
+         Else 
+          if ((operator =='/'))            {result =  a/b;}
+
+    
 
     return result;
     //write your code above this line
@@ -24,7 +33,19 @@ public class BasicTasks {
   public static Decimal mathPower(Integer a, Integer n) {
     //write your code below this line
     Decimal result = 0;
+ Decimal c = a;
+    Decimal d = a;
+    If(n==0) {c=1;}
+    else{
+    Integer count = 1;
+    While (count<=n) {
+      count++;
+      c = d*a;
+      d = c;
+       }}
+      Decimal result = 0;
 
+    result = c;
     return result;
     //write your code above this line
   }
