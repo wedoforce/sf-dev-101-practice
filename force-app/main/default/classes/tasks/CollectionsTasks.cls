@@ -24,14 +24,15 @@ public class CollectionsTasks {
     Integer sum,
     List<Integer> listWithElementsToCheck
   ) {
+    boolean result = false;
     for (integer i = 0; i < listWithElementsToCheck.size(); i++) {
       for (integer j = i + 1; j < listWithElementsToCheck.size(); j++)
         if (listWithElementsToCheck[i] + listWithElementsToCheck[j] == sum) {
-          return true;
+          result = true;
+          break;
         }
-      continue;
     }
-    return false;
+    return result;
   }
 
   // use single loop and an arbitrary collection to address same requirements as in sumCanBeReached
@@ -39,13 +40,15 @@ public class CollectionsTasks {
     Integer sum,
     List<Integer> listWithElementsToCheck
   ) {
-    for (integer element : listWithElementsToCheck) {
-      if (listWithElementsToCheck.contains(sum - element)) {
-        return true;
+    boolean result = false;
+    Set<Integer> setFromList = new Set<Integer>(listWithElementsToCheck);
+    for (integer element : setFromList) {
+      if (setFromList.contains(sum - element)) {
+        result = true;
+        break;
       }
-      break;
     }
-    return false;
+    return result;
   }
 
   // over a trading day stock prices change many times. Stock prices are written into 2 list after every price change:
@@ -72,15 +75,12 @@ public class CollectionsTasks {
     List<Integer> priceTicks
   ) {
     Integer stockPrice;
-    //if (!codeTicks.isEmpty() && !priceTicks.isEmpty()) {
-    for (integer i = codeTicks.size() - 1; i >= 0; i--) {
+    for (Integer i = codeTicks.size() - 1; i >= 0; i--) {
       if (codeTicks[i] == stock) {
         stockPrice = priceTicks[i];
-        return stockPrice;
+        break;
       }
-      break;
     }
-    //}
     return stockPrice;
   }
 }
