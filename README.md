@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 # Apex Basics
 
@@ -215,6 +216,10 @@ Once you are comfortable with the concept, jump into real tasks located under [`
 - [Simple about heap(in Russian)](https://qna.habr.com/q/843499)
 - # [Why Heap?](https://help.salesforce.com/s/articleView?id=000321537&type=1)
 
+=======
+
+> > > > > > > origin/main
+
 # WeDoForce: Junior Dev
 
 [Course overview](https://github.com/wedoforce/sf-dev-101-practice/tree/course-overview)
@@ -226,6 +231,11 @@ If you have any organizational questions - please visit [FAQ](/FAQ.md) before as
 **Dates**: Jan 31st 2022 - Feb 6th 2022
 
 **Lessons**:
+<<<<<<< HEAD
+
+=======
+
+> > > > > > > origin/main
 
 - [Environment setup](https://github.com/wedoforce/sf-dev-101-practice/tree/lessons/environment-check) - deadline: Feb 6th
 - [Git 101](https://github.com/wedoforce/sf-dev-101-practice/tree/lessons/git-101) - deadline: Feb 6th
@@ -239,6 +249,11 @@ Please complete [this feedback](https://forms.gle/2cGmmYAPSSSQnMo38) form by Mon
 **Dates**: Feb 7th 2022 - Feb 13th 2022
 
 **Lessons**:
+<<<<<<< HEAD
+
+=======
+
+> > > > > > > origin/main
 
 - [Apex Basics 101](https://github.com/wedoforce/sf-dev-101-practice/tree/lessons/apex-basics-101) - deadline: Feb 13th
 
@@ -246,4 +261,8 @@ Please complete [this feedback](https://forms.gle/2cGmmYAPSSSQnMo38) form by Mon
 
 Link will be provided soon
 
-> > > > > > > 4eb00fcfb65a94a5b5c0754035a7597e4c55532e
+<<<<<<< HEAD
+
+> > > > > > > # 4eb00fcfb65a94a5b5c0754035a7597e4c55532e
+> > > > > > >
+> > > > > > > origin/main
