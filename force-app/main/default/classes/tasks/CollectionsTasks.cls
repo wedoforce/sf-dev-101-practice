@@ -45,19 +45,16 @@ public class CollectionsTasks {
     Integer sum,
     List<Integer> listWithElementsToCheck
   ) {
-    Boolean b = false;
- 
-    //listWithElementsToCheck.sort();
-    Set<Integer>setWithElementsToCheck = new Set<Integer>(listWithElementsToCheck);
-        for (Integer i : setWithElementsToCheck) {
-      if (setWithElementsToCheck.contains(sum-i)) {
-        b=true;
-        break;
-      }  
 
+      Set<Integer> findedValue= new Set<Integer>();
+        for (Integer  i : listWithElementsToCheck) {
+         if(findedValue.contains(sum-i)){
+            return true;
+           }
+         findedValue.add(i);
+        }
+      return false;
     }
-    return b;
-  }
 
   // over a trading day stock prices change many times. Stock prices are written into 2 list after every price change:
   // Code of the changed stock is added to the 1st list - codeTicks
