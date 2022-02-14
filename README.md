@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 # Apex Basics
 
 - **Topics:**
@@ -218,8 +215,6 @@ Once you are comfortable with the concept, jump into real tasks located under [`
 
 =======
 
-> > > > > > > origin/main
-
 # WeDoForce: Junior Dev
 
 [Course overview](https://github.com/wedoforce/sf-dev-101-practice/tree/course-overview)
@@ -231,7 +226,6 @@ If you have any organizational questions - please visit [FAQ](/FAQ.md) before as
 **Dates**: Jan 31st 2022 - Feb 6th 2022
 
 **Lessons**:
-<<<<<<< HEAD
 
 =======
 
@@ -249,11 +243,8 @@ Please complete [this feedback](https://forms.gle/2cGmmYAPSSSQnMo38) form by Mon
 **Dates**: Feb 7th 2022 - Feb 13th 2022
 
 **Lessons**:
-<<<<<<< HEAD
 
 =======
-
-> > > > > > > origin/main
 
 - [Apex Basics 101](https://github.com/wedoforce/sf-dev-101-practice/tree/lessons/apex-basics-101) - deadline: Feb 13th
 
@@ -261,8 +252,4 @@ Please complete [this feedback](https://forms.gle/2cGmmYAPSSSQnMo38) form by Mon
 
 Link will be provided soon
 
-<<<<<<< HEAD
-
 > > > > > > > # 4eb00fcfb65a94a5b5c0754035a7597e4c55532e
-> > > > > > >
-> > > > > > > origin/main
