@@ -5,15 +5,13 @@ public class CollectionsTasks {
   // *can you implement it without checking the value/without if statement?
   public static Integer countZerosInBitList( List<Integer> listWithZerosAndUnits) {
     
-    Integer result = 0;
+    Integer countOnes = 0;
 
     for(Integer i : listWithZerosAndUnits){
-      if(i == 0) {
-        result++;
-      }
+      countOnes += i;
     }
 
-    return result;
+    return listWithZerosAndUnits.size() - countOnes;
   }
 
   // check if it is possible to add any 2 elements from the listWithElementsToCheck to get the sum
@@ -42,27 +40,13 @@ public class CollectionsTasks {
     List<Integer> listWithElementsToCheck
   ) {
 
-    List<Integer> sortedList = new List<Integer>(listWithElementsToCheck);
-    sortedList.sort();
-
-    Integer leftIndex = 0;
-    Integer rightIndex = listWithElementsToCheck.size() - 1;
-
-    while (leftIndex != rightIndex) {
-      Integer currentSum = leftIndex + rightIndex;
-
-      if (currentSum < sum) {
-        leftIndex++;
-      }
-
-      if (currentSum > sum) {
-        rightIndex--;
-      }
-
-      if(currentSum == sum){
+    Set<Integer> setWithElementsToCheck = new Set<Integer>(listWithElementsToCheck);
+    for (Integer i : setWithElementsToCheck) {
+      if(setWithElementsToCheck.contains(sum - i)) {
         return true;
       }
     }
+
     return false;
   }
 
