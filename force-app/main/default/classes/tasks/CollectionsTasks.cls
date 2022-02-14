@@ -7,11 +7,20 @@ public class CollectionsTasks {
     List<Integer> listWithZerosAndUnits
   ) {
     integer countZeros = 0;
-    for (Integer element : listWithZerosAndUnits) {
-      if (element == 0) {
-        countZeros++;
-      }
+    // no IFs solution
+    integer i = 0; //use for iteration in while loop
+    listWithZerosAndUnits.sort(); // sorted asc so that zeros are at the beginning of the list
+    system.debug('sorted: ' + listWithZerosAndUnits);
+    // iterate through the sorted list
+    while (i < listWithZerosAndUnits.size() && listWithZerosAndUnits[i] == 0) {
+      countZeros++;
+      i++;
     }
+    // for (Integer element : listWithZerosAndUnits) {
+    //   if (element == 0) {
+    //     countZeros++;
+    //   }
+    // }
     return countZeros;
   }
 
@@ -46,7 +55,8 @@ public class CollectionsTasks {
       if (setFromList.contains(sum - element)) {
         result = true;
         break;
-      }
+      } else
+        result = false;
     }
     return result;
   }
