@@ -51,7 +51,19 @@ private class CollectionsTasksTest {
     System.assert(
       CollectionsTasks.sumCanBeReachedOptimal(2 * listSize - 3, elements)
     );
-    System.assert(CollectionsTasks.sumCanBeReachedOptimal(3, elements));
+    System.assert(CollectionsTasks.sumCanBeReachedOptimal(31, elements));
+
+    final Integer aIndex = (Math.random() * listSize).intValue();
+    final Integer bIndex = (Math.random() * listSize).intValue();
+    final Integer sum = elements[aIndex] + elements[bIndex];
+    System.assert(
+      CollectionsTasks.sumCanBeReachedOptimal(sum, elements),
+      sum +
+      ' = ' +
+      elements[aIndex] +
+      ' + ' +
+      elements[bIndex]
+    );
     System.assert(
       !CollectionsTasks.sumCanBeReachedOptimal(2 * listSize - 1, elements)
     );
