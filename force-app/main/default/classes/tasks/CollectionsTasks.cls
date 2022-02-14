@@ -6,13 +6,17 @@ public class CollectionsTasks {
   public static Integer countZerosInBitList(
     List<Integer> listWithZerosAndUnits
   ) {
-    Integer counter = 0;
-    for (Integer i : listWithZerosAndUnits) {
-      if (i == 0) {
-        counter++;
-      }
+    
+    listWithZerosAndUnits.sort();
+    System.debug(listWithZerosAndUnits);
+    Integer indexOfFirstUnit = listWithZerosAndUnits.indexOf(1);
+    System.debug(indexOfFirstUnit);
+    if (indexOfFirstUnit == -1) {
+      return listWithZerosAndUnits.size(); // if there is no Units, it means a list contains only Zeros
     }
-    return counter;
+    else 
+    return indexOfFirstUnit; // if there is at least one Unit, it means its index means the quantity of all Zeros
+
   }
 
   // check if it is possible to add any 2 elements from the listWithElementsToCheck to get the sum
@@ -42,11 +46,28 @@ public class CollectionsTasks {
     List<Integer> listWithElementsToCheck
   ) {
 
-    for (Integer i = 0; i < listWithElementsToCheck.size()-1; i++) {
-      if (listWithElementsToCheck[i]+listWithElementsToCheck[i+1] == sum) {
+    listWithElementsToCheck.sort();
+    Integer left = 0;
+    Integer right = listWithElementsToCheck.size() -1 ;
+
+    while (left < right) {
+      Integer leftValue = listWithElementsToCheck[left];
+      Integer rightValue = listWithElementsToCheck[right];
+      Integer sumValue = leftValue + rightValue;
+
+      if (sumValue == sum) {
         return true;
       }
+
+      if (sumValue > sum) {
+        right--;
+      }
+
+      if (sumValue < sum) {
+        left++;
+      }
     }
+
     return false;
   }
 
@@ -73,14 +94,14 @@ public class CollectionsTasks {
     List<String> codeTicks,
     List<Integer> priceTicks
   ) {
-
-    Integer i = 0;
+    
     Integer stockPosition = 0;
-    for (String stockName : codeTicks) {
-      if (stockName == stock) {
+    Integer firstOccurence = codeTicks.indexOf(stock);
+
+    for (Integer i = firstOccurence; i < codeTicks.size(); i++) {
+      if (codeTicks[i] == stock) {
         stockPosition = i;
       }
-      i++;
     }
 
     return priceTicks[stockPosition];
