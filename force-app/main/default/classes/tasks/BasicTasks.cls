@@ -41,21 +41,10 @@ public class BasicTasks {
   // a: any integer; n: n >= 0 (n can be greater or equal to 0)
   public static Decimal mathPower(Integer a, Integer n) {
     //write your code below this line
-    Decimal result = 0;
+    Decimal result = 1;
 
-    if(n == 0) {
-      result = 1;
-    }
-
-    if(n == 1){
-      result = a;
-    }
-
-    if(n > 1) {
-      result = a;
-      for(Integer i = 1; i < n; i++) {
+    for(Integer i = 0; i < n; i++) {
         result *= a;
-      }
     }
 
     return result;
