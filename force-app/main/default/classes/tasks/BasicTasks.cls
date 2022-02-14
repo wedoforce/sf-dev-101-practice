@@ -18,7 +18,7 @@ return ((Long)a+(Long)b);
   public static Double basicMathCalculate(Double a, Double b, String operator) {
     //write your code below this line
     Double result = 0;
-
+/*
     switch on operator {
       when '+' {
         result = a + b;
@@ -38,6 +38,22 @@ return ((Long)a+(Long)b);
         System.debug('operator out of task');
       }
     }
+
+    */
+    if (operator == '+') {
+      result=a + b;
+    }
+    else if (operator=='-'){
+      result=a-b;
+    }
+    else if (operator=='*'){
+      result=a*b;
+    } 
+    else if (operator=='/' && b <> 0){
+      result = a / b;
+    }
+    
+
     return result;
     //write your code above this line
   }
