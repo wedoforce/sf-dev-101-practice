@@ -31,8 +31,21 @@ public class BasicTasks {
   // a: any integer; n: n >= 0 (n can be greater or equal to 0)
   public static Decimal mathPower(Integer a, Integer n) {
     //write your code below this line
-    Decimal result = 0;
-    result = Math.pow(a, n);
+    Decimal result;
+    
+    if (n == 0) {
+      result = 1;
+    }
+    else {
+      result = a;
+    }
+
+    Integer i = 1;
+    while (i < n) {
+      result *= a;
+      i++;
+    }
+
     return result;
     //write your code above this line
   }
