@@ -7,15 +7,12 @@ public class CollectionsTasks {
     List<Integer> listWithZerosAndUnits
   ) {
     
-    listWithZerosAndUnits.sort();
-    System.debug(listWithZerosAndUnits);
-    Integer indexOfFirstUnit = listWithZerosAndUnits.indexOf(1);
-    System.debug(indexOfFirstUnit);
-    if (indexOfFirstUnit == -1) {
-      return listWithZerosAndUnits.size(); // if there is no Units, it means a list contains only Zeros
+    Integer unitsSum = 0;
+    for (Integer item : listWithZerosAndUnits) {
+      unitsSum += item;
     }
-    else 
-    return indexOfFirstUnit; // if there is at least one Unit, it means its index means the quantity of all Zeros
+
+    return (listWithZerosAndUnits.size() - unitsSum);
 
   }
 
@@ -46,26 +43,14 @@ public class CollectionsTasks {
     List<Integer> listWithElementsToCheck
   ) {
 
-    listWithElementsToCheck.sort();
-    Integer left = 0;
-    Integer right = listWithElementsToCheck.size() -1 ;
+    Set<Integer> takenValues = new Set<Integer>();
 
-    while (left < right) {
-      Integer leftValue = listWithElementsToCheck[left];
-      Integer rightValue = listWithElementsToCheck[right];
-      Integer sumValue = leftValue + rightValue;
-
-      if (sumValue == sum) {
+    for (Integer item : listWithElementsToCheck) {
+      if (takenValues.contains(sum - item)) {
         return true;
       }
 
-      if (sumValue > sum) {
-        right--;
-      }
-
-      if (sumValue < sum) {
-        left++;
-      }
+      takenValues.add(item);
     }
 
     return false;
@@ -96,14 +81,16 @@ public class CollectionsTasks {
   ) {
     
     Integer stockPosition = 0;
-    Integer firstOccurence = codeTicks.indexOf(stock);
 
-    for (Integer i = firstOccurence; i < codeTicks.size(); i++) {
+    for (Integer i = codeTicks.size() - 1; i >= 0; i--) {
+      System.debug('========= ' + i);
       if (codeTicks[i] == stock) {
         stockPosition = i;
+        break;
       }
     }
 
+    System.debug('********* ' + priceTicks[stockPosition]);
     return priceTicks[stockPosition];
   }
 }
