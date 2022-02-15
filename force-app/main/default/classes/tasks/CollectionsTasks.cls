@@ -8,7 +8,7 @@ public class CollectionsTasks {
   ) {
     integer countZeros = 0;
     // Sum up BitList solution
-    integer countBits;
+    integer countBits = 0;
     for (Integer element : listWithZerosAndUnits) {
       countBits++;
     }
