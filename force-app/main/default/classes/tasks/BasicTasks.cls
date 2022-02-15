@@ -31,21 +31,14 @@ public class BasicTasks {
   // a: any integer; n: n >= 0 (n can be greater or equal to 0)
   public static Decimal mathPower(Integer a, Integer n) {
     //write your code below this line
-    Decimal result;
     
-    if (n == 0) {
-      result = 1;
-    }
-    else {
-      result = a;
-    }
-
-    Integer i = 1;
-    while (i < n) {
+    Decimal result = 1;
+    Integer i = n;
+    while (i > 0) {
       result *= a;
-      i++;
+      i--;
     }
-
+    System.Debug(result);
     return result;
     //write your code above this line
   }
