@@ -7,15 +7,22 @@ public class CollectionsTasks {
     List<Integer> listWithZerosAndUnits
   ) {
     integer countZeros = 0;
+    // Sum up BitList solution
+    integer countBits;
+    for (Integer element : listWithZerosAndUnits) {
+      countBits++;
+    }
+    countZeros = countBits - listWithZerosAndUnits.size();
+    return countZeros;
     // no IFs solution
-    integer i = 0; //use for iteration in while loop
+    /* integer i = 0; //use for iteration in while loop
     listWithZerosAndUnits.sort(); // sorted asc so that zeros are at the beginning of the list
     system.debug('sorted: ' + listWithZerosAndUnits);
     // iterate through the sorted list
     while (i < listWithZerosAndUnits.size() && listWithZerosAndUnits[i] == 0) {
       countZeros++;
       i++;
-    }
+    } */
     // for (Integer element : listWithZerosAndUnits) {
     //   if (element == 0) {
     //     countZeros++;
@@ -52,6 +59,7 @@ public class CollectionsTasks {
     boolean result = false;
     Set<Integer> setFromList = new Set<Integer>(listWithElementsToCheck);
     for (integer element : setFromList) {
+      setFromList.remove(element);
       if (setFromList.contains(sum - element)) {
         result = true;
         break;
