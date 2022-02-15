@@ -42,7 +42,6 @@ public class CollectionsTasks {
 
     Set<Integer> setWithElementsToCheck = new Set<Integer>(listWithElementsToCheck);
     for (Integer i : setWithElementsToCheck) {
-   
       setWithElementsToCheck.remove(i);
 
       if(setWithElementsToCheck.contains(sum - i)) {
