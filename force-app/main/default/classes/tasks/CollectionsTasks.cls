@@ -10,7 +10,7 @@ public class CollectionsTasks {
     // Sum up BitList solution
     integer countBits = 0;
     for (Integer element : listWithZerosAndUnits) {
-      countBits++;
+      countBits += element;
     }
     countZeros = listWithZerosAndUnits.size() - countBits;
 
