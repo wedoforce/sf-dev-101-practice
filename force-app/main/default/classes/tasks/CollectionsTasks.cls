@@ -12,7 +12,7 @@ public class CollectionsTasks {
     for (Integer element : listWithZerosAndUnits) {
       countBits++;
     }
-    countZeros = countBits - listWithZerosAndUnits.size();
+    countZeros = listWithZerosAndUnits.size() - countBits;
 
     // no IFs solution
     /* integer i = 0; //use for iteration in while loop
