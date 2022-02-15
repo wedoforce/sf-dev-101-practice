@@ -83,14 +83,12 @@ public class CollectionsTasks {
     Integer stockPosition = 0;
 
     for (Integer i = codeTicks.size() - 1; i >= 0; i--) {
-      System.debug('========= ' + i);
       if (codeTicks[i] == stock) {
         stockPosition = i;
         break;
       }
     }
 
-    System.debug('********* ' + priceTicks[stockPosition]);
     return priceTicks[stockPosition];
   }
 }
