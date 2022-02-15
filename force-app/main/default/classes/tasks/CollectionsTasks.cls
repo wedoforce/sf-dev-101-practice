@@ -13,7 +13,7 @@ public class CollectionsTasks {
       countBits++;
     }
     countZeros = countBits - listWithZerosAndUnits.size();
-    return countZeros;
+
     // no IFs solution
     /* integer i = 0; //use for iteration in while loop
     listWithZerosAndUnits.sort(); // sorted asc so that zeros are at the beginning of the list
