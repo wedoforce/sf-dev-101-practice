@@ -67,6 +67,35 @@ private class CollectionsTasksTest {
     System.assert(
       !CollectionsTasks.sumCanBeReachedOptimal(2 * listSize - 1, elements)
     );
+
+    final List<Integer> listWithElementsToCheck = new List<Integer>{
+      12,
+      -3,
+      10,
+      1,
+      0
+    };
+
+    System.assert(
+      CollectionsTasks.sumCanBeReachedOptimal(9, listWithElementsToCheck),
+      '12 + -3 = 9; ' + listWithElementsToCheck
+    );
+    System.assert(
+      !CollectionsTasks.sumCanBeReachedOptimal(0, listWithElementsToCheck),
+      'no 2 elements can add up to 0: ' + listWithElementsToCheck
+    );
+    System.assert(
+      CollectionsTasks.sumCanBeReachedOptimal(-3, listWithElementsToCheck),
+      '-3 + 0 = -3; ' + listWithElementsToCheck
+    );
+    System.assert(
+      !CollectionsTasks.sumCanBeReachedOptimal(0, new List<Integer>{ 0, 1 }),
+      'no 2 elements can add up to 0: ' + listWithElementsToCheck
+    );
+    System.assert(
+      !CollectionsTasks.sumCanBeReachedOptimal(1, new List<Integer>{ 1 }),
+      'no 2 elements can add up to 1: ' + listWithElementsToCheck
+    );
   }
 
   @isTest
