@@ -3,8 +3,10 @@ public class BasicTasks {
   public static Long sumIntegers(Integer a, Integer b) {
     // ignore public static.. Focus on variables
     //write your code below this line
-    Integer sum = 0;
-
+    Long sum = 0;
+    Long x = a;
+    Long y = b;
+    sum = x + y;
     return sum;
     //write your code above this line
   }
@@ -14,7 +16,23 @@ public class BasicTasks {
   public static Double basicMathCalculate(Double a, Double b, String operator) {
     //write your code below this line
     Double result = 0;
-
+    switch on (operator) {
+      when '+' {
+        result = a + b;
+      }
+      when '-' {
+        result = a - b;
+      }
+      when '*' {
+        result = a * b;
+      }
+      when '/' {
+        result = a / b;
+      }
+      when else {
+        System.debug('unknown symbol');
+      }
+    }
     return result;
     //write your code above this line
   }
@@ -24,7 +42,11 @@ public class BasicTasks {
   public static Decimal mathPower(Integer a, Integer n) {
     //write your code below this line
     Decimal result = 0;
-
+    Integer i = n;
+    while (i > 0) {
+      result *= a;
+      i--;
+    }
     return result;
     //write your code above this line
   }
