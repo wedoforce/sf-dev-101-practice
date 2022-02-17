@@ -4,7 +4,9 @@ public class BasicTasks {
     // ignore public static.. Focus on variables
     //write your code below this line
     Long sum = 0;
-    return sum = a + b;
+    Long x = a;
+    Long y = b;
+    return sum = x + y;
     //write your code above this line
   }
 
