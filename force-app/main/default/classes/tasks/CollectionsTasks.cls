@@ -5,8 +5,16 @@ public class CollectionsTasks {
   // *can you implement it without checking the value/without if statement?
   public static Integer countZerosInBitList(
     List<Integer> listWithZerosAndUnits
-  ) {
-    return 0;
+  ) Integer quantity1=0;
+    Integer listquantity=0;
+    for (Integer i: listWithZerosAndUnits){
+    quantity1=quantity1+i;
+    listquantity=listquantity+1;
+
+  }
+Integer quantityof0=listquantity-quantity1;
+
+    return quantityof0;
   }
 
   // check if it is possible to add any 2 elements from the listWithElementsToCheck to get the sum
@@ -18,7 +26,16 @@ public class CollectionsTasks {
     Integer sum,
     List<Integer> listWithElementsToCheck
   ) {
-    return false;
+     boolean thereIsASum=false;
+      for(Integer i =0; i<= Math.Round(listWithElementsToCheck.size()/2);i++){
+        for(Integer j=listWithElementsToCheck.size(); j>= (Math.Round(listWithElementsToCheck.size()/2)+1);j--)
+      {IF(listWithElementsToCheck.get(i)+listWithElementsToCheck.get(j)==sum) {thereIsASum=true; break;} else {continue;}
+
+      }
+       IF(thereIsASum=true)   {break;} else {continue;}
+        
+      }
+    return thereIsASum;
   }
 
   // use single loop and an arbitrary collection to address same requirements as in sumCanBeReached
@@ -26,7 +43,13 @@ public class CollectionsTasks {
     Integer sum,
     List<Integer> listWithElementsToCheck
   ) {
-    return false;
+    Integer d=0;
+    Boolean thereIsASum=false;
+    for (Integer i:listWithElementsToCheck){
+      thereIsASum=listWithElementsToCheck.contains(sum-i);
+      IF(thereIsASum) {break;} else {continue;}
+    }
+    return thereIsASum;
   }
 
   // over a trading day stock prices change many times. Stock prices are written into 2 list after every price change:
@@ -52,6 +75,16 @@ public class CollectionsTasks {
     List<String> codeTicks,
     List<Integer> priceTicks
   ) {
-    return 0;
+     Integer latestCRMPrice=0;
+    Integer latestAPPPrice=0;
+    Integer c=0;
+    Integer a=0;
+    For (Integer i=codeTicks.size(); i>=0; i--) {
+      If ((codeTicks.get(i)=='CRM') && (c==0)) {c=i;} else {
+        if((codeTicks.get(i)=='APP' ) &&  (a==0)) {a=i;}}
+    }
+    latestCRMPrice=priceTicks.get(c);
+    latestAPPPrice=priceTicks.get(a);
+    return latestCRMPrice;
   }
 }
