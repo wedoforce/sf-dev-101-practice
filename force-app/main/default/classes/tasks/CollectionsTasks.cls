@@ -35,4 +35,26 @@ public class CollectionsTasks {
     for (Integer i : setWithElementsToCheck) {
       setWithElementsToCheck.remove(i);
 
-      if (setWithElementsToCheck.contains(sum -
+      if (setWithElementsToCheck.contains(sum - i)) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  public static Integer lastPrice(
+    String stock,
+    List<String> codeTicks,
+    List<Integer> priceTicks
+  ) {
+    Integer result = 0;
+    for (Integer i = codeTicks.size() - 1; i >= 0; i--) {
+      if (codeTicks[i] == stock) {
+        result = priceTicks[i];
+        break;
+      }
+    }
+    return result;
+  }
+}
