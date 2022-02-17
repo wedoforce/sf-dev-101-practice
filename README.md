@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # Apex Basics
 
 - **Topics:**
@@ -213,7 +211,7 @@ Once you are comfortable with the concept, jump into real tasks located under [`
 
 - [Strongly Typed and Weakly Typed languages](https://stackoverflow.com/questions/2690544/what-is-the-difference-between-a-strongly-typed-language-and-a-statically-typed#:~:text=Strongly%20typed%20means%2C%20a%20variable,it%20into%20the%20int%20123%20.)
 - [Simple about heap(in Russian)](https://qna.habr.com/q/843499)
-- # [Why Heap?](https://help.salesforce.com/s/articleView?id=000321537&type=1)
+- [Why Heap?](https://help.salesforce.com/s/articleView?id=000321537&type=1)
 
 # WeDoForce: Junior Dev
 
@@ -245,5 +243,3 @@ Please complete [this feedback](https://forms.gle/2cGmmYAPSSSQnMo38) form by Mon
 **Feedback**
 
 Link will be provided soon
-
-> > > > > > > main
