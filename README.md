@@ -1,6 +1,7 @@
 # Apex Basics
 
 - **Topics:**
+  - [Apex Syntax Basics](#apex-syntax-basics)
   - [Variables](#variables)
   - [Conditional Statements](#conditional-statements)
   - [Loops](#loops)
@@ -11,6 +12,15 @@
 - [Additional Resources](#additional-resources)
 
 ---
+
+## Apex Basics
+
+Every language has its own semantics/syntax: what you can write for computer to understand what do you want.  
+Before you jump into details for _variables_, _loops_, etc. please get familiar with Fundamemtal Apex Language Concepts
+
+#### **Must Read**
+
+- [Apex Language Concepts](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_qs_core_concepts.htm)
 
 ## Variables
 
