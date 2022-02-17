@@ -4,10 +4,7 @@ public class BasicTasks {
     // ignore public static.. Focus on variables
     //write your code below this line
     Long sum = 0;
-    Long x = a;
-    Long y = b;
-    sum = x + y;
-    return sum;
+    return sum = a + b;
     //write your code above this line
   }
 
@@ -41,7 +38,7 @@ public class BasicTasks {
   // a: any integer; n: n >= 0 (n can be greater or equal to 0)
   public static Decimal mathPower(Integer a, Integer n) {
     //write your code below this line
-    Decimal result = 0;
+    Decimal result = 1;
     Integer i = n;
     while (i > 0) {
       result *= a;
