@@ -22,7 +22,7 @@
 
 :notebook: `What is the program in wide meaning? It is a list of "commands" that will be executed one by one in some logic. This is a procedure approach in programming. The static keyword means that variable or method marked as a static will be accessible on class load. This topic will be overviewed in the next OOP lesson. For now all we need to know that we have a class and it is like a container for our code. We can separate logic inside a class by using methods. Methods are the basic Big building blocks of programs. Methods are often called sub-Programs or procedures.`
 
-`Why do we need to separate logic? By separating logic to methods we can increase reusability of logic and code more clean and readable`
+`Why do we need to separate logic? By separating logic to methods we can increase reusability of logic and code more clean and readable. Also if you need to make changes in logic that uses in a several places you need to change it ones.`
 
 `Let's take as example one of the tasks from the previous lessons. `
 
@@ -130,31 +130,36 @@ public static Integer sumIntegers(Integer a, Integer b)
 
     ClassName.variableName;
 
-    
+
 ...
-#### **[Topic 1] Must Read**
+#### **[Static Methods, Variables] Must Read**
 
 :notebook: `to get enough theoretical knowledge`
 
-1. [Reading 1](reading1)
-   1. [Reading 1.1](reading1.1)
-   1. [...](...)
-1. [Reading 2](reading2)
-1. [...](...)
-
+1. [Static and Instance Methods, Variables, and Initialization Code](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_static.htm)
 
 
 # Best Practices
 
-:notebook: `I want to know best practices for engineers`
-
-1. ...
+1. [Salesforce Naming Convention](https://quip.com/MW5cAPVwat8k#JCIACA8Q963)
 
 ## Cheat Sheet
 
 :notebook: `I want to have a cheat sheet/data sheet at the end to get back to it anytime`
 
-1. ...
+1. `method declaration: public static [void/return value type] methodName(arguments): `
+
+        public static Id getCurrentUserId() {
+          return UserInfo.getUserId();
+        }
+
+    `for void type:`
+
+        public static void incrementValues(List<Integer> integersToIncrement) {
+            for(Integer element : integersToIncrement) {
+                element++;
+            }
+        }
 
 ---
 
