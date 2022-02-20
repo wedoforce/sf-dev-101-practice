@@ -1,4 +1,14 @@
 public with sharing class StaticTask {
+  /*This method recieves a string payload with contact data that loks like  
+
+  'FirstName: firstname, LastName: lastname, Email: ex@mple.com;
+   FirstName: firstname, LastName: lastname, Email: ex@mple.com;
+   ...
+  '
+
+  . Then it parses data and return Map collection where key is meail and value is Contact
+  Feel free to refactorthis class. Don't forget about single responsibility approach when you create a new method.
+  */
   public static Map<String, Contact> extractEmailToContactMap(String payload) {
     Map<String, Contact> emailToContactMap = new Map<String, Contact>();
     List<String> contacts = payload.split(';');
