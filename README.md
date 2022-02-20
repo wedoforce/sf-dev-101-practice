@@ -1,9 +1,9 @@
 # Apex Basics. Static methods
 
 - **Topics:**
-    - [Topic 1](#topic-1)
-    - [Topic 2](#topic-2)
-    - [..](...)
+  - [Topic 1](#topic-1)
+  - [Topic 2](#topic-2)
+  - [..](...)
 - [Best Practices](#best-practices)
 - [Cheat Sheet](#cheat-sheet)
 - [Practice](#practice)
@@ -78,7 +78,7 @@ https://github.com/wedoforce/sf-dev-101/blob/lessons/apex-basics-101/force-app/m
 
     return result;
 
-`All we need to do is move this logic to a method, make it returnable and mark as a static. To do use "static" keyword in method declaration, write type of return value and declare arguments:`
+`All we need to do is move this logic to a method, make it return a value and mark as a static. To do use "static" keyword in method declaration, write type of return value and declare arguments:`
 
 public static Integer sumIntegers(Integer a, Integer b)
 
@@ -92,14 +92,14 @@ public static Integer sumIntegers(Integer a, Integer b)
     }
 
 `And call it whenever you need. To call a method inside a class you just need to write:`
-      
+
     displayLine();
 
 `If method should return some value and you want to us it you need to declare variable with suitable Type.`
 
     Integer resultOfSum = sumIntegers(5, 8);
 
-`You can build a chain of method calls so one method could call another one and so on. Also  you can return value without saving an intermediate result in separate variable. Instead of: `
+`You can build a chain of method calls so one method could call another one and so on. Also you can return value without saving an intermediate result in separate variable. Instead of: `
 
     public static Long sumIntegers(Integer a, Integer b) {
         Long sum = 0;
@@ -116,6 +116,7 @@ public static Integer sumIntegers(Integer a, Integer b)
     }
 
 ## **[Static Variables] in Salesforce**
+
 `As methods variables also could be a Static. You will need this in case you need to have access to on variables in a few methods or out from a class. To declase variable as a Static you need to declare it out of method in the beginning of the class:`
 
     public class BasicTasks {
@@ -130,14 +131,13 @@ public static Integer sumIntegers(Integer a, Integer b)
 
     ClassName.variableName;
 
-
 ...
+
 #### **[Static Methods, Variables] Must Read**
 
 :notebook: `to get enough theoretical knowledge`
 
 1. [Static and Instance Methods, Variables, and Initialization Code](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_static.htm)
-
 
 # Best Practices
 
@@ -147,7 +147,7 @@ public static Integer sumIntegers(Integer a, Integer b)
 
 :notebook: `I want to have a cheat sheet/data sheet at the end to get back to it anytime`
 
-1. `method declaration: public static [void/return value type] methodName(arguments): `
+1.  `method declaration: public static [void/return value type] methodName(arguments): `
 
         public static Id getCurrentUserId() {
           return UserInfo.getUserId();
@@ -180,22 +180,8 @@ public static Integer sumIntegers(Integer a, Integer b)
 
 ### Overview
 
-1. :notebook: `Where are practice tasks`
-1. :notebook: `How to know if I've done the task`
-1. :notebook: `How to troubleshoot`
+1. :notebook: `Refactor StaticTask method by separating logic to methods. Take a look on class method extractEmailToContactMap. Is it easy to understand what does it do? You need to refactor this method. Use principe of sigle responsibility for each method. As usual you can run test class to verify that logic works correct.`
 
 ---
 
-# Extra Readings
-
-:notebook: `Sometimes, I did understand everything, but I want to learn more about it - I need extra materials`
-
-- [Extra Reading 1](extrareading1)
-- [...](...)
-
-# Additional Resources
-
-:notebook: `To broaden my knowledge`
-
-- [Additional Resource 1](addittionalresource1)
-- [...](...)
+- [Clean Code]()
