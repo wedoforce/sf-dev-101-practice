@@ -20,7 +20,7 @@
 
 ### **[Static Methods] in Salesforce**
 
-:notebook: `What is the program in wide meaning? It is a list of "commands" that will be executed one by one in some logic. This is a procedure approach in programming. The static keyword means that variable or method marked as a static will be accessible on class load. This topic will be overviewed in the next OOP lesson. For now all we need to know that we have a class and it is like a container for our code. We can separate logic inside a class by using methods. Methods are the basic Big building blocks of programs. Methods are often called sub-Programs or procedures.`
+:notebook: `What is the program in wide meaning? It is a list of "commands" that will be executed one by one in some logic. This is a procedure approach in programming. The static keyword means that variable or method marked as a static will be accessible on class load. This topic will be overviewed in the next OOP lesson. For now all we need to know that we have a class and it is like a container for our code. We can separate logic inside a class by using methods. Methods are the basic building blocks of programs. Methods are often called sub-Programs or procedures.`
 
 `Why do we need to separate logic? By separating logic to methods we can increase reusability of logic and code more clean and readable. Also if you need to make changes in logic that uses in a several places you need to change it ones.`
 
@@ -80,9 +80,28 @@ https://github.com/wedoforce/sf-dev-101/blob/lessons/apex-basics-101/force-app/m
 
 `All we need to do is move this logic to a method, make it return a value and mark as a static. To do use "static" keyword in method declaration, write type of return value and declare arguments:`
 
-public static Integer sumIntegers(Integer a, Integer b)
+    public static Long sumIntegers(Integer a, Integer b)
 
-`Where "static" means that you can access this method without creating an instance of current class(will be explained in OOP lesson). "Long" - type of return value. "Integer a, Integer b" type of data that you can pass to proceed.`
+`"Integer a, Integer b" are the pieces of data that you can pass to proceed. This means, when you call this method, you must pass some variables. E.g.:`
+
+    Integer integerValue = 5;
+    BasicTasks.sumIntegers(integerValue, 2); // works
+    BasicTasks.sumIntegers(integerValue); // doesn't work, since the 2nd argument is missing
+
+`NB: the variables passed to a method may not have the same names and method arguments! Name argument as you see fit the specific method you're working on.`
+
+`"static" means that you can access this method directly from a class, like this:`
+
+    BasicTasks.sumIntegers(1, 2);
+
+`"Long" - a type of return value. This means the method should output a value of this type. To specify an output of a method using the return keyword. the return instruction is always the last piece that is executed in the method, no code within the method will be executed once a method has returned a value. I.e.`
+
+    public static Long sumIntegers(Integer a, Integer b) {
+        Long sum = 0;
+        sum = (Long) a + (Long) b;
+        return sum; // the return instruction is the last executed instruction when a method is called
+        sum = 100; // This will never be executed
+    }
 
 `Method could be "void" type that means that this method doesn't return a value. In some cases we don't need any return value. All you already now "System.debug()" that displays information in debug log. debug is a void method of class System. For example you want to separate output of your code by long "---------" string and to avoid typing each time System.debug('---------') you can write your own void method:`
 
