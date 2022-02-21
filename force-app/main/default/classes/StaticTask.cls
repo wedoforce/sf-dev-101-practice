@@ -108,5 +108,6 @@ public with sharing class StaticTask {
   public static Map<String, Contact> extractEmailToContactMap(String payload) {
     List<String> v1 = separatedByComa(payload);
     Map<String, Contact> m1 = separatedAndPut(v1);
+    return m1;
   }
 }
