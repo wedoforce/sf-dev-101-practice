@@ -12,6 +12,7 @@ public with sharing class StaticTask {
 
   public static List<String> separatedByComa(String payload) {
     List<String> contacts = payload.split(';');
+    List<String> contactSeparatedByComaString = new List<String>();
     for (String contactAsString : contacts) {
       List<String> contactSeparatedByComaString = contactAsString.split(',');
     }
