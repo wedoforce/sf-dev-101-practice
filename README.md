@@ -199,7 +199,7 @@ https://github.com/wedoforce/sf-dev-101/blob/lessons/apex-basics-101/force-app/m
 
 ### Overview
 
-1. :notebook: `Refactor StaticTask method by separating logic to methods. Take a look on class method extractEmailToContactMap. Is it easy to understand what it does? You need to refactor this method. Use principe of snigle responsibility for each method. As usual you can run the test class to verify that logic works correct.`
+1. :notebook: `Refactor StaticTask method by separating logic to methods. Take a look on class method extractEmailToContactMap. Is it easy to understand what it does? You need to refactor this method. Use principe of single responsibility for each method. As usual you can run the test class to verify that logic works correct.`
 
 ---
 
