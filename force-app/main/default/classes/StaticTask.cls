@@ -11,13 +11,14 @@ public with sharing class StaticTask {
   */
   public static List<String> splitString(String str1, String exp1) {
     return str1.split(exp1);
-  }
+  } // split enter data and (return List)
   public static String splitStringAndReplace(String str2, String exp2) {
-    return str2.split(exp2)[1].replaceAll(' ', '');
+    return str2.split(exp2)[1].replaceAll(' ', ''); //split enter data and replace element List
   }
 
-  public static Map<String, Contact> extractEmailToContactMap(String payload) {
-    Map<String, Contact> emailToContactMap = new Map<String, Contact>();
+  public static List<Contact> contactListParsed(String payload) {
+    // entered string split on the LastName,FirstName, Email and return in List<Contact>
+    List<Contact> contactList = new List<Contact>();
     List<String> contacts = splitString(payload, ';');
     for (String contactAsString : contacts) {
       Contact parsedContact = new Contact();
@@ -35,13 +36,19 @@ public with sharing class StaticTask {
         if (element.contains('Email')) {
           if (String.isNotBlank(element.split(':')[1])) {
             parsedContact.Email = splitStringAndReplace(element, ':');
-            emailToContactMap.put(
-              element.split(':')[1].replaceAll(' ', ''),
-              parsedContact
-            );
           }
         }
       }
+      contactList.add(parsedContact); // add splited string to List<Contact>
+    }
+    return contactList;
+  }
+
+  public static Map<String, Contact> extractEmailToContactMap(String payload) {
+    Map<String, Contact> emailToContactMap = new Map<String, Contact>();
+    List<Contact> sepContactList = contactListParsed(payload);
+    for (Contact i : sepContactList) {
+      emailToContactMap.put(i.Email, i);
     }
     return emailToContactMap;
   }
