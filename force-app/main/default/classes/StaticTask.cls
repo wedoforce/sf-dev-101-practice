@@ -9,9 +9,10 @@ public with sharing class StaticTask {
   . Then it parses data and return Map collection where key is meail and value is Contact
   Feel free to refactorthis class. Don't forget about single responsibility approach when you create a new method.
   */
-  public static Map<String, Contact> extractEmailToContactMap(String payload) {
-    Map<String, Contact> emailToContactMap = new Map<String, Contact>();
+  public static List<Contact> listContact(String payload) {
+    List<Contact> contList = new List<Contact>();
     List<String> contacts = payload.split(';');
+
     for (String contactAsString : contacts) {
       Contact parsedContact = new Contact();
       List<String> contactSeparatedByComaString = contactAsString.split(',');
@@ -23,14 +24,21 @@ public with sharing class StaticTask {
           parsedContact.LastName = element.split(':')[1].replaceAll(' ', '');
         }
         if (element.contains('Email')) {
-          if (String.isNotBlank(element.split(':')[1])) {
-            parsedContact.Email = element.split(':')[1].replaceAll(' ', '');
-            emailToContactMap.put(
-              element.split(':')[1].replaceAll(' ', ''),
-              parsedContact
-            );
-          }
+          parsedContact.Email = element.split(':')[1].replaceAll(' ', '');
         }
+        contList.add(parsedContact);
+      }
+    }
+
+    return contList;
+  }
+
+  public static Map<String, Contact> extractEmailToContactMap(String payload) {
+    List<Contact> contList = listContact(payload);
+    Map<String, Contact> emailToContactMap = new Map<String, Contact>();
+    for (Contact c : contList) {
+      if (String.isNotBlank(c.Email)) {
+        emailToContactMap.put(c.Email, c);
       }
     }
     return emailToContactMap;
