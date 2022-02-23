@@ -1,14 +1,15 @@
 public with sharing class StaticTask {
-  /*This method recieves a string payload with contact data that loks like  
+  /*This method recieves a string payload with contact data that looks like  
 
   'FirstName: firstname, LastName: lastname, Email: ex@mple.com;
    FirstName: firstname, LastName: lastname, Email: ex@mple.com;
    ...
   '
 
-  . Then it parses data and return Map collection where key is meail and value is Contact
-  Feel free to refactorthis class. Don't forget about single responsibility approach when you create a new method.
+  . Then it parses data and return Map collection where key is e-mail and value is Contact
+  Feel free to refactor this class. Don't forget about single responsibility approach when you create a new method.
   */
+<<<<<<< HEAD
   public static Map<String, Contact> emailToContactMap = new Map<String, Contact>();
 
   public static Map<String, Contact> extractEmailToContactMap(String payload) {
@@ -16,6 +17,79 @@ public with sharing class StaticTask {
     setContactsToMap(contacts);
 
     return emailToContactMap;
+=======
+
+    public static Map<String, Contact> extractEmailToContactMap(String payload) {
+
+      List<String> payloadAsString = StaticTask.splitPayloadByElements(payload);
+      Map<Integer, List<String>> sObjectFieldsMap = StaticTask.splitStringListByObjectFields(payloadAsString);
+      List<Contact> contactList = StaticTask.splitObjectFieldsMapByRecords(sObjectFieldsMap);
+      Map<String, Contact> emailAndContactMap = StaticTask.createEmailAndContactMap(contactList);
+
+      return emailAndContactMap;
+  }
+
+
+  public static List<String> splitPayloadByElements (String payload) {
+    return payload.split(';');
+  }
+
+  
+  public static Map<Integer, List<String>> splitStringListByObjectFields (List<String> strList) {
+    
+    Map<Integer, List<String>> sObjectFieldsMap = new Map<Integer, List<String>>();
+    Integer i = 0;
+    
+    for (String element : strList) {
+      sObjectFieldsMap.put(i, element.split(','));
+      i++;
+    }
+
+    return sObjectFieldsMap;
+  }
+
+
+  public static List<Contact> splitObjectFieldsMapByRecords (Map<Integer, List<String>> fieldsMap) {
+    
+    List<Contact> contactList = new List<Contact>();
+
+    for (Integer i = 0; i < fieldsMap.size(); i++) {
+      Contact record = new Contact();
+      List<String> mapElement = fieldsMap.get(i);
+
+      for (String element : mapElement) {
+        if (element.contains('FirstName')) {
+          record.FirstName = element.split(':')[1].replaceAll(' ', '');
+        }
+
+        if (element.contains('LastName')) {
+          record.LastName = element.split(':')[1].replaceAll(' ', '');
+        }
+
+        if (element.contains('Email') && String.isNotBlank(element.split(':')[1])) {
+          record.Email = element.split(':')[1].replaceAll(' ', '');
+        }
+      }
+
+      contactList.add(record);
+    }
+
+    return contactList;
+  }
+
+
+  public static Map<String, Contact> createEmailAndContactMap (List<Contact> contactList) {
+
+    Map<String, Contact> emailAndContactMap = new Map<String, Contact>();
+
+    for (Contact record : contactList) {
+      if ((String) record.get('Email') != null) {
+        emailAndContactMap.put((String) record.get('Email'), record);
+      }
+    }
+
+    return emailAndContactMap;
+>>>>>>> 5690cff (refactor StaticTask.cls)
   }
 
   public static void setContactsToMap(List<String> contacts){
