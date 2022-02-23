@@ -9,6 +9,12 @@ public with sharing class StaticTask {
   . Then it parses data and return Map collection where key is meail and value is Contact
   Feel free to refactorthis class. Don't forget about single responsibility approach when you create a new method.
   */
+
+  public static String extractor(String Str) {
+    String extract = str.split(':')[1].replaceAll(' ', '');
+    return extract;
+  }
+
   public static List<Contact> listContact(String payload) {
     List<Contact> contList = new List<Contact>();
     List<String> contacts = payload.split(';');
@@ -18,13 +24,13 @@ public with sharing class StaticTask {
       List<String> contactSeparatedByComaString = contactAsString.split(',');
       for (String element : contactSeparatedByComaString) {
         if (element.contains('FirstName')) {
-          parsedContact.FirstName = element.split(':')[1].replaceAll(' ', '');
+          parsedContact.FirstName = extractor(element);
         }
         if (element.contains('LastName')) {
-          parsedContact.LastName = element.split(':')[1].replaceAll(' ', '');
+          parsedContact.LastName = extractor(element);
         }
         if (element.contains('Email')) {
-          parsedContact.Email = element.split(':')[1].replaceAll(' ', '');
+          parsedContact.Email = extractor(element);
         }
         contList.add(parsedContact);
       }
