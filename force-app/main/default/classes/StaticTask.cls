@@ -25,9 +25,7 @@ public with sharing class StaticTask {
       
         setFirstNameField(element, parsedContact);
       
-        if (isLastName(element)) {
-          parsedContact.lastName = getFieldValueFromStr(element);
-        }
+        setLastNameField(element, parsedContact);
       
         if (isEmailName(element)) {
           if (String.isNotBlank(element.split(':')[1])) {
@@ -45,6 +43,14 @@ public with sharing class StaticTask {
   public static Contact setFirstNameField(String elem, Contact contact){
     if (isFirstName(elem)) {
       contact.FirstName = getFieldValueFromStr(elem);
+    }
+
+    return contact;
+  }
+
+  public static Contact setLastNameField(String elem, Contact contact){
+    if (isLastName(elem)) {
+      contact.LastName = getFieldValueFromStr(elem);
     }
 
     return contact;
