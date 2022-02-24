@@ -20,15 +20,15 @@
 
 ### **[Static Methods] in Salesforce**
 
-:notebook: `What is the program in wide meaning? It is a list of "commands" that will be executed one by one in some logic. This is a procedure approach in programming. The static keyword means that variable or method marked as a static will be accessible on class load. This topic will be overviewed in the next OOP lesson. For now all we need to know that we have a class and it is like a container for our code. We can separate logic inside a class by using methods. Methods are the basic building blocks of programs. Methods are often called sub-Programs or procedures.`
+:notebook: `What is the program in wide meaning? It is a list of "commands" that will be executed one by one in some logic. This is a procedure approach in programming. The static keyword means that variable or method marked as a static will be accessible on class load. This topic will be overviewed in the next OOP lesson. For now all we need to know is that we have a class and it is like a container for our code. We can separate logic inside a class by using methods. Methods are the basic building blocks of programs. Methods are often called sub-Programs or procedures.`
 
-`Why do we need to separate logic? By separating logic to methods we can increase reusability of logic and code more clean and readable. Also if you need to make changes in logic that uses in a several places you need to change it ones.`
+`Why do we need to separate logic? By separating logic to methods we can increase reusability of logic and make code more clean and readable. Also if you need to make changes in logic that is used in several places you need to change it ones.`
 
 `Let's take as example one of the tasks from the previous lessons. `
 
 https://github.com/wedoforce/sf-dev-101/blob/lessons/apex-basics-101/force-app/main/default/classes/tasks/BasicTasks.cls
 
-`Here we need to implement basic calculator that works with Integer type. This could be implemented by using if/else statement or switch case. For example`
+`Here we need to implement basic calculator that works with Integer type. This could be implemented by using if/else statement or Switch case. For example`
 
     if (operator == '+') {
       result = a + b;
@@ -78,23 +78,23 @@ https://github.com/wedoforce/sf-dev-101/blob/lessons/apex-basics-101/force-app/m
 
     return result;
 
-`All we need to do is move this logic to a method, make it return a value and mark as a static. To do use "static" keyword in method declaration, write type of return value and declare arguments:`
+`All we need to do is to move this logic to a method, make it return a value and mark as a static. To do it use "static" keyword in method declaration, write type of return value and declare arguments:`
 
     public static Long sumIntegers(Integer a, Integer b)
 
-`"Integer a, Integer b" are the pieces of data that you can pass to proceed. This means, when you call this method, you must pass some variables. E.g.:`
+`"Integer a, Integer b" are the pieces of data that you can pass to proceed. This means when you call this method you must pass some variables. E.g.:`
 
     Integer integerValue = 5;
     BasicTasks.sumIntegers(integerValue, 2); // works
     BasicTasks.sumIntegers(integerValue); // doesn't work, since the 2nd argument is missing
 
-`NB: the variables passed to a method may not have the same names and method arguments! Name argument as you see fit the specific method you're working on.`
+`NB: the variables passed to a method may not have the same names and method arguments! Name argument as you see fits the specific method you're working on.`
 
 `"static" means that you can access this method directly from a class, like this:`
 
     BasicTasks.sumIntegers(1, 2);
 
-`"Long" - a type of return value. This means the method should output a value of this type. To specify an output of a method using the return keyword. the return instruction is always the last piece that is executed in the method, no code within the method will be executed once a method has returned a value. I.e.`
+`"Long" - a type of return value. This means the method should output a value of this type. To specify an output of a method use the return keyword. The return instruction is always the last piece that is executed in the method, no code within the method will be executed once a method has returned a value. I.e.`
 
     public static Long sumIntegers(Integer a, Integer b) {
         Long sum = 0;
@@ -103,7 +103,7 @@ https://github.com/wedoforce/sf-dev-101/blob/lessons/apex-basics-101/force-app/m
         sum = 100; // This will never be executed
     }
 
-`Method could be "void" type that means that this method doesn't return a value. In some cases we don't need any return value. All you already now "System.debug()" that displays information in debug log. debug is a void method of class System. For example you want to separate output of your code by long "---------" string and to avoid typing each time System.debug('---------') you can write your own void method:`
+`Method could be "void" type that means that this method doesn't return a value. In some cases we don't need any return value. You already know "System.debug()" that displays information in debug log. Debug is a void method of class System. For example you want to separate output of your code by long "---------" string and to avoid typing each time System.debug('---------') you can write your own void method:`
 
     public static void displayLine()
     {
@@ -136,7 +136,7 @@ https://github.com/wedoforce/sf-dev-101/blob/lessons/apex-basics-101/force-app/m
 
 ## **[Static Variables] in Salesforce**
 
-`As methods variables also could be a Static. You will need this in case you need to have access to on variables in a few methods or out from a class. To declase variable as a Static you need to declare it out of method in the beginning of the class:`
+`As methods variables also could be a Static. You will need this in case you need to have access to variables in a few methods or out from a class. To declare variable as a Static you need to declare it out of method in the beginning of the class:`
 
     public class BasicTasks {
         public static String clientEmail = 'ex@mple.com';
@@ -146,7 +146,7 @@ https://github.com/wedoforce/sf-dev-101/blob/lessons/apex-basics-101/force-app/m
         }
     }
 
-`You can work with this variable as usual variable inside any method in the class. Usually static variables uses in cases when you need to save some constants or you need to have access to some variable in all methods and to avoid passing variable as param you can access and modify this variable from anywhere in the class. To access static variable from another class it should marked as public (same for methods from another classes) and it could be called by usin class name dot variable name`
+`You can work with this variable as usual variable inside any method in the class. Usually static variables are used in cases when you need to save some constants or when you need to have access to some variable in all methods and to avoid passing variable as param you can access and modify this variable from anywhere in the class. To access static variable from another class it should be marked as public (same for methods from another classes) and it could be called by using class name dot variable name`
 
     ClassName.variableName;
 
@@ -199,7 +199,7 @@ https://github.com/wedoforce/sf-dev-101/blob/lessons/apex-basics-101/force-app/m
 
 ### Overview
 
-1. :notebook: `Refactor StaticTask method by separating logic to methods. Take a look on class method extractEmailToContactMap. Is it easy to understand what does it do? You need to refactor this method. Use principe of sigle responsibility for each method. As usual you can run test class to verify that logic works correct.`
+1. :notebook: `Refactor StaticTask method by separating logic to methods. Take a look on class method extractEmailToContactMap. Is it easy to understand what it does? You need to refactor this method. Use principe of single responsibility for each method. As usual you can run the test class to verify that logic works correct.`
 
 ---
 
