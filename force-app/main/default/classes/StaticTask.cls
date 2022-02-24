@@ -23,9 +23,7 @@ public with sharing class StaticTask {
       
       for (String element : contactSeparatedByComaString) {
       
-        if (isFirstName(element)) {
-          parsedContact.FirstName = getFieldValueFromStr(element);
-        }
+        setFirstNameField(element, parsedContact);
       
         if (isLastName(element)) {
           parsedContact.lastName = getFieldValueFromStr(element);
@@ -35,19 +33,21 @@ public with sharing class StaticTask {
           if (String.isNotBlank(element.split(':')[1])) {
             parsedContact.Email = getFieldValueFromStr(element);
 
-            // emailToContactMap.put(
-            //   // element.split(':')[1].replaceAll(' ', ''),
-            //   parsedContact.Email,
-            //   parsedContact
             addContactToMap(parsedContact, emailToContactMap);
-            // );
           }
         }
-
       }
     }
 
     return emailToContactMap;
+  }
+
+  public static Contact setFirstNameField(String elem, Contact contact){
+    if (isFirstName(elem)) {
+      contact.FirstName = getFieldValueFromStr(elem);
+    }
+
+    return contact;
   }
 
   public static void addContactToMap(Contact contact, Map<String, Contact> mapCollection) {
@@ -56,6 +56,8 @@ public with sharing class StaticTask {
       contact
     );
   }
+
+
 
   public static List<String> getContactFieldList(String str){
     return str.split(',');
