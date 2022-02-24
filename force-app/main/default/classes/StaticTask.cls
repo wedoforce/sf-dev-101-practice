@@ -59,15 +59,15 @@ public with sharing class StaticTask {
 
       for (String element : mapElement) {
         if (element.contains('FirstName')) {
-          record.FirstName = element.split(':')[1].replaceAll(' ', '');
+          record.FirstName = StaticTask.getRightPartOfPairWithoutSpaces(element);
         }
 
         if (element.contains('LastName')) {
-          record.LastName = element.split(':')[1].replaceAll(' ', '');
+          record.LastName = StaticTask.getRightPartOfPairWithoutSpaces(element);
         }
 
         if (element.contains('Email') && String.isNotBlank(element.split(':')[1])) {
-          record.Email = element.split(':')[1].replaceAll(' ', '');
+          record.Email = StaticTask.getRightPartOfPairWithoutSpaces(element);
         }
       }
 
@@ -172,5 +172,10 @@ public with sharing class StaticTask {
 
   public static String trimm(String str){
     return str.replaceAll(' ', '');
+  }
+
+
+  public static String getRightPartOfPairWithoutSpaces (String pair) {
+    return pair.split(':')[1].replaceAll(' ', '');
   }
 }
