@@ -15,45 +15,53 @@ public with sharing class StaticTask {
 
     List<String> contacts = getContactsAsStringList(payload);
 
-    for (String contactAsString : contacts) {
-      
-      Contact parsedContact = new Contact();
-      
-      List<String> contactSeparatedByComaString = getContactFieldList(contactAsString);
-      
-      for (String element : contactSeparatedByComaString) {
-      
-        setFirstNameField(element, parsedContact);
-      
-        setLastNameField(element, parsedContact);
-      
-        if (isEmailName(element)) {
-          if (String.isNotBlank(element.split(':')[1])) {
-            parsedContact.Email = getFieldValueFromStr(element);
-
-            addContactToMap(parsedContact, emailToContactMap);
-          }
-        }
-      }
-    }
+    setContactsToMap(contacts, emailToContactMap);
 
     return emailToContactMap;
   }
 
-  public static Contact setFirstNameField(String elem, Contact contact){
+  public static void setContactsToMap(List<String> contacts, Map<String, Contact> emailToContactMap){
+    for (String contactAsString : contacts) {
+      
+      Contact parsedContact = new Contact();
+      
+      List<String> contactSeparatedByComaString = getContactSeparatedByComaString(contactAsString);
+      
+      setContactToMap(contactSeparatedByComaString, parsedContact, emailToContactMap);
+    }
+  }
+
+  public static void setContactToMap(List<String> contactSeparatedByComaString, Contact parsedContact, Map<String, Contact> emailToContactMap){
+    for (String element : contactSeparatedByComaString) {
+      
+      setFirstNameField(element, parsedContact);
+    
+      setLastNameField(element, parsedContact);
+    
+      setEmailField(element, parsedContact);
+      
+      if(isEmailNotEmpty(element)){
+        addContactToMap(parsedContact, emailToContactMap);
+      }
+    }
+  }
+
+  public static void setEmailField(String elem, Contact contact){
+    if (isEmail(elem)) {
+      contact.Email = getFieldValueFromStr(elem); 
+    }
+  }
+
+  public static void setFirstNameField(String elem, Contact contact){
     if (isFirstName(elem)) {
       contact.FirstName = getFieldValueFromStr(elem);
     }
-
-    return contact;
   }
 
-  public static Contact setLastNameField(String elem, Contact contact){
+  public static void setLastNameField(String elem, Contact contact){
     if (isLastName(elem)) {
       contact.LastName = getFieldValueFromStr(elem);
     }
-
-    return contact;
   }
 
   public static void addContactToMap(Contact contact, Map<String, Contact> mapCollection) {
@@ -63,9 +71,15 @@ public with sharing class StaticTask {
     );
   }
 
+  public static Boolean isEmailNotEmpty(String elem){
+    if (isEmail(elem) && String.isNotBlank(elem.split(':')[1])) {
+      return true;
+    }
 
+    return false;
+  }
 
-  public static List<String> getContactFieldList(String str){
+  public static List<String> getContactSeparatedByComaString(String str){
     return str.split(',');
   }
 
@@ -78,7 +92,6 @@ public with sharing class StaticTask {
     return trimm(result);
   }
 
-
   public static Boolean isFirstName(String element){
     return element.contains('FirstName');
   }
@@ -87,7 +100,7 @@ public with sharing class StaticTask {
     return element.contains('LastName');
   }
 
-  public static Boolean isEmailName(String element){
+  public static Boolean isEmail(String element){
     return element.contains('Email');
   }
 
