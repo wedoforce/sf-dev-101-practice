@@ -6,7 +6,15 @@ public class CollectionsTasks {
   public static Integer countZerosInBitList(
     List<Integer> listWithZerosAndUnits
   ) {
-    return 0;
+    Integer quantity1 = 0;
+    Integer listquantity = 0;
+    for (Integer i : listWithZerosAndUnits) {
+      quantity1 = quantity1 + i;
+      listquantity = listquantity + 1;
+    }
+    Integer quantityof0 = listquantity - quantity1;
+
+    return quantityof0;
   }
 
   // check if it is possible to add any 2 elements from the listWithElementsToCheck to get the sum
@@ -18,7 +26,26 @@ public class CollectionsTasks {
     Integer sum,
     List<Integer> listWithElementsToCheck
   ) {
-    return false;
+    boolean thereIsASum = false;
+    for (Integer i = 0; i <= listWithElementsToCheck.size() - 2; i++) {
+      for (Integer j = i + 1; j <= listWithElementsToCheck.size() - 1; j++) {
+        if (
+          listWithElementsToCheck.get(i) + listWithElementsToCheck.get(j) == sum
+        ) {
+          thereIsASum = true;
+          break;
+        } else {
+          continue;
+        }
+      }
+
+      if (thereIsASum) {
+        break;
+      } else {
+        continue;
+      }
+    }
+    return thereIsASum;
   }
 
   // use single loop and an arbitrary collection to address same requirements as in sumCanBeReached
@@ -26,7 +53,15 @@ public class CollectionsTasks {
     Integer sum,
     List<Integer> listWithElementsToCheck
   ) {
-    return false;
+    Set<Integer> deltaSet = new Set<Integer>();
+    Boolean thereIsASum = false;
+    for (Integer i : listWithElementsToCheck) {
+      if (sum != i) {
+        deltaSet.add(sum - i);
+      }
+    }
+    thereIsASUM = deltaSet.removeAll(listWithElementsToCheck);
+    return thereIsASum;
   }
 
   // over a trading day stock prices change many times. Stock prices are written into 2 list after every price change:
@@ -52,6 +87,25 @@ public class CollectionsTasks {
     List<String> codeTicks,
     List<Integer> priceTicks
   ) {
-    return 0;
+    Integer latestCRMPrice = 0;
+    Integer latestAPPPrice = 0;
+    Integer c = 0;
+    Integer a = 0;
+    for (Integer i = codeTicks.size() - 1; i >= 0; i--) {
+      if ((codeTicks.get(i) == 'CRM') && (c == 0)) {
+        c = i;
+      } else {
+        if ((codeTicks.get(i) == 'APP') && (a == 0)) {
+          a = i;
+        } else if ((a != 0) && (c != 0)) {
+          break;
+        } else {
+          continue;
+        }
+      }
+    }
+    latestCRMPrice = priceTicks.get(c);
+    latestAPPPrice = priceTicks.get(a);
+    return latestCRMPrice;
   }
 }
