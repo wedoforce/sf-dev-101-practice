@@ -47,12 +47,6 @@ public with sharing class StaticTask {
     }
   }
 
-  public static void setEmailField(String elem, Contact contact) {
-    if (isEmail(elem)) {
-      contact.Email = getFieldValueFromStr(elem);
-    }
-  }
-
   public static void setFirstNameField(String elem, Contact contact) {
     if (isFirstName(elem)) {
       contact.FirstName = getFieldValueFromStr(elem);
