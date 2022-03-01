@@ -40,6 +40,16 @@ public with sharing class StaticTask {
       if (isEmailNotEmpty(element)) {
         addContactToMap(parsedContact, emailToContactMap);
       }
+      contactList.add(parsedContact); // add splited string to List<Contact>
+    }
+    return contactList;
+  }
+
+  public static Map<String, Contact> extractEmailToContactMap(String payload) {
+    Map<String, Contact> emailToContactMap = new Map<String, Contact>();
+    List<Contact> sepContactList = contactListParsed(payload);
+    for (Contact i : sepContactList) {
+      emailToContactMap.put(i.Email, i);
     }
   }
 
