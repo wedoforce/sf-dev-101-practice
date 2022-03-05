@@ -10,6 +10,7 @@ private with sharing class StaticTaskTest {
       'FirstName: Fibi, LastName: Bufe, Email: Fibi.Bufe@friends.com; ' +
       'FirstName: Joey, LastName: Tribbiani, Email: Joey.Tribbiani@friends.com; ' +
       'FirstName: John, LastName: Doe, Email: ; ' +
+      'FirstName: LastName, LastName: FirstName, Email: LastName.FirstName@lol.kek; ' +
       'FirstName: Rose, LastName: Geller, Email: Rose.Geller@friends.com; ';
 
     Map<String, Contact> resultMap = StaticTask.extractEmailToContactMap(
@@ -18,9 +19,9 @@ private with sharing class StaticTaskTest {
 
     System.assertNotEquals(null, resultMap, 'result must not be null');
     System.assertEquals(
-      6,
+      7,
       resultMap.size(),
-      'result map must contain 6 pair records'
+      'result map must contain 7 pair records'
     );
 
     for (String email : resultMap.keySet()) {
