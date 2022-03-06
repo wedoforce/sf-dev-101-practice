@@ -87,25 +87,16 @@ public class CollectionsTasks {
     List<String> codeTicks,
     List<Integer> priceTicks
   ) {
-    Integer latestCRMPrice = 0;
-    Integer latestAPPPrice = 0;
     Integer c = 0;
-    Integer a = 0;
     for (Integer i = codeTicks.size() - 1; i >= 0; i--) {
-      if ((codeTicks.get(i) == 'CRM') && (c == 0)) {
+      if ((codeTicks.get(i) == stock) && (c == 0)) {
         c = i;
+        break;
       } else {
-        if ((codeTicks.get(i) == 'APP') && (a == 0)) {
-          a = i;
-        } else if ((a != 0) && (c != 0)) {
-          break;
-        } else {
-          continue;
-        }
+        continue;
       }
     }
-    latestCRMPrice = priceTicks.get(c);
-    latestAPPPrice = priceTicks.get(a);
-    return latestCRMPrice;
+    Integer lastPrice = priceTicks.get(c);
+    return lastPrice;
   }
 }
