@@ -9,68 +9,42 @@ public with sharing class StaticTask {
   . Then it parses data and return Map collection where key is e-mail and value is Contact
   Feel free to refactor this class. Don't forget about single responsibility approach when you create a new method.
   */
-<<<<<<< HEAD
-  public static Map<String, Contact> emailToContactMap = new Map<String, Contact>();
-
-  public static Map<String, Contact> extractEmailToContactMap(String payload) {
-    List<String> contacts = getContactsAsStringList(payload);
-    setContactsToMap(contacts);
-
-    return emailToContactMap;
-=======
 
     public static Map<String, Contact> extractEmailToContactMap(String payload) {
 
-      List<String> payloadAsString = StaticTask.splitPayloadByElements(payload);
-      Map<Integer, List<String>> sObjectFieldsMap = StaticTask.splitStringListByObjectFields(payloadAsString);
-      List<Contact> contactList = StaticTask.splitObjectFieldsMapByRecords(sObjectFieldsMap);
+      List<String> payloadAsStringList = StaticTask.splitPayloadByElementStringList(payload);
+      Map<Integer, List<String>> sObjectFieldsMap = StaticTask.splitStringListByObjectFieldMap(payloadAsStringList);
+      List<Contact> contactList = StaticTask.splitObjectFieldMapByRecords(sObjectFieldsMap);
       Map<String, Contact> emailAndContactMap = StaticTask.createEmailAndContactMap(contactList);
 
       return emailAndContactMap;
   }
 
 
-  public static List<String> splitPayloadByElements (String payload) {
+  public static List<String> splitPayloadByElementStringList (String payload) {
     return payload.split(';');
   }
 
   
-  public static Map<Integer, List<String>> splitStringListByObjectFields (List<String> strList) {
+  public static Map<Integer, List<String>> splitStringListByObjectFieldMap (List<String> stringList) {
     
-    Map<Integer, List<String>> sObjectFieldsMap = new Map<Integer, List<String>>();
-    Integer i = 0;
+    Map<Integer, List<String>> sObjectFieldMap = new Map<Integer, List<String>>();
     
-    for (String element : strList) {
-      sObjectFieldsMap.put(i, element.split(','));
-      i++;
+    for (Integer i = 0; i < stringList.size(); i++) {
+      sObjectFieldMap.put(i, stringList[i].split(','));
     }
 
-    return sObjectFieldsMap;
+    return sObjectFieldMap;
   }
 
 
-  public static List<Contact> splitObjectFieldsMapByRecords (Map<Integer, List<String>> fieldsMap) {
+  public static List<Contact> splitObjectFieldMapByRecords (Map<Integer, List<String>> integerStringListMap) {
     
     List<Contact> contactList = new List<Contact>();
 
-    for (Integer i = 0; i < fieldsMap.size(); i++) {
-      Contact record = new Contact();
-      List<String> mapElement = fieldsMap.get(i);
-
-      for (String element : mapElement) {
-        if (element.contains('FirstName')) {
-          record.FirstName = StaticTask.getRightPartOfPairWithoutSpaces(element);
-        }
-
-        if (element.contains('LastName')) {
-          record.LastName = StaticTask.getRightPartOfPairWithoutSpaces(element);
-        }
-
-        if (element.contains('Email') && String.isNotBlank(element.split(':')[1])) {
-          record.Email = StaticTask.getRightPartOfPairWithoutSpaces(element);
-        }
-      }
-
+    for (Integer i = 0; i < integerStringListMap.size(); i++) {
+      List<String> singleListFromMap = integerStringListMap.get(i);
+      Contact record = StaticTask.formContactFromStringList(singleListFromMap);
       contactList.add(record);
     }
 
@@ -89,93 +63,37 @@ public with sharing class StaticTask {
     }
 
     return emailAndContactMap;
->>>>>>> 5690cff (refactor StaticTask.cls)
-  }
-
-  public static void setContactsToMap(List<String> contacts){
-    for (String contactAsString : contacts) {
-      Contact parsedContact = new Contact();
-      List<String> contactSeparatedByComaString = getContactSeparatedByComaString(contactAsString);
-      setContactToMap(contactSeparatedByComaString, parsedContact);
-    }
-  }
-
-  public static void setContactToMap(List<String> contactSeparatedByComaString, Contact parsedContact){
-    for (String element : contactSeparatedByComaString) {
-      setFirstNameField(element, parsedContact);
-      setLastNameField(element, parsedContact);
-      setEmailField(element, parsedContact);
-
-      if(isEmailNotEmpty(element)){
-        addContactToMap(parsedContact, emailToContactMap);
-      }
-    }
-  }
-
-  public static void setEmailField(String elem, Contact contact){
-    if (isEmail(elem)) {
-      contact.Email = getFieldValueFromStr(elem); 
-    }
-  }
-
-  public static void setFirstNameField(String elem, Contact contact){
-    if (isFirstName(elem)) {
-      contact.FirstName = getFieldValueFromStr(elem);
-    }
-  }
-
-  public static void setLastNameField(String elem, Contact contact){
-    if (isLastName(elem)) {
-      contact.LastName = getFieldValueFromStr(elem);
-    }
-  }
-
-  public static void addContactToMap(Contact contact, Map<String, Contact> mapCollection) {
-    mapCollection.put(
-      contact.Email,
-      contact
-    );
-  }
-
-  public static Boolean isEmailNotEmpty(String elem){
-    if (isEmail(elem) && String.isNotBlank(elem.split(':')[1])) {
-      return true;
-    }
-
-    return false;
-  }
-
-  public static List<String> getContactSeparatedByComaString(String str){
-    return str.split(',');
-  }
-
-  public static List<String> getContactsAsStringList(String str){
-    return str.split(';');
-  }
-
-  public static String getFieldValueFromStr(String str){
-    String result = str.split(':')[1];
-    return trimm(result);
-  }
-
-  public static Boolean isFirstName(String element){
-    return element.contains('FirstName');
-  }
-
-  public static Boolean isLastName(String element){
-    return element.contains('LastName');
-  }
-
-  public static Boolean isEmail(String element){
-    return element.contains('Email');
-  }
-
-  public static String trimm(String str){
-    return str.replaceAll(' ', '');
   }
 
 
   public static String getRightPartOfPairWithoutSpaces (String pair) {
-    return pair.split(':')[1].replaceAll(' ', '');
+    return pair.substringAfter(':').deleteWhitespace();
+  }
+
+
+  public static Boolean isRightPartOfPairNotBlank (String pair) {
+    return String.isNotBlank(pair.substringAfter(':'));
+  }
+
+
+  public static Contact formContactFromStringList (List<String> listOfContactFields) {
+    
+    Contact record = new Contact();
+
+    for (String fieldString : listOfContactFields) {
+      if (fieldString.contains('FirstName') && StaticTask.isRightPartOfPairNotBlank(fieldString)) {
+        record.FirstName = StaticTask.getRightPartOfPairWithoutSpaces(fieldString);
+      }
+
+      else if (fieldString.contains('LastName') && StaticTask.isRightPartOfPairNotBlank(fieldString)) {
+        record.LastName = StaticTask.getRightPartOfPairWithoutSpaces(fieldString);
+      }
+
+      else if (fieldString.contains('Email') && StaticTask.isRightPartOfPairNotBlank(fieldString)) {
+        record.Email = StaticTask.getRightPartOfPairWithoutSpaces(fieldString);
+      }
+    }
+
+    return record;
   }
 }
