@@ -18,7 +18,6 @@ public with sharing class StaticTask {
   public static List<String> splitStringByComma(String str) {
     return str.split(',');
   }
-
   public static Map<String, Contact> extractEmailToContactMap(String payload) {
     Map<String, Contact> emailToContactMap = new Map<String, Contact>();
     List<String> contacts = splitStringBySemicolon(payload);
