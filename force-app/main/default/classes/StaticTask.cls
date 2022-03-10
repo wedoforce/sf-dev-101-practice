@@ -10,14 +10,14 @@ public with sharing class StaticTask {
   Feel free to refactor this class. Don't forget about single responsibility approach when you create a new method.
   */
 
-    public static Map<String, Contact> extractEmailToContactMap(String payload) {
+  public static Map<String, Contact> extractEmailToContactMap (String payload) {
 
-      List<String> payloadAsStringList = StaticTask.splitPayloadByElementStringList(payload);
-      Map<Integer, List<String>> sObjectFieldsMap = StaticTask.splitStringListByObjectFieldMap(payloadAsStringList);
-      List<Contact> contactList = StaticTask.splitObjectFieldMapByRecords(sObjectFieldsMap);
-      Map<String, Contact> emailAndContactMap = StaticTask.createEmailAndContactMap(contactList);
+    List<String> payloadAsStringList = StaticTask.splitPayloadByElementStringList(payload);
+    Map<Integer, List<String>> sObjectFieldsMap = StaticTask.splitStringListByObjectFieldMap(payloadAsStringList);
+    List<Contact> contactList = StaticTask.splitObjectFieldMapByRecords(sObjectFieldsMap);
+    Map<String, Contact> emailAndContactMap = StaticTask.createEmailAndContactMap(contactList);
 
-      return emailAndContactMap;
+    return emailAndContactMap;
   }
 
 
@@ -57,8 +57,10 @@ public with sharing class StaticTask {
     Map<String, Contact> emailAndContactMap = new Map<String, Contact>();
 
     for (Contact record : contactList) {
-      if ((String) record.get('Email') != null) {
-        emailAndContactMap.put((String) record.get('Email'), record);
+      String email = (String) record.get('Email');
+
+      if (email != null) {
+        emailAndContactMap.put(email, record);
       }
     }
 
@@ -66,13 +68,18 @@ public with sharing class StaticTask {
   }
 
 
-  public static String getRightPartOfPairWithoutSpaces (String pair) {
-    return pair.substringAfter(':').deleteWhitespace();
+  public static String getValue (String pair) {
+    return pair.substringAfter(':').trim();
   }
 
 
-  public static Boolean isRightPartOfPairNotBlank (String pair) {
-    return String.isNotBlank(pair.substringAfter(':'));
+  public static String getField (String pair) {
+    return pair.substringBefore(':').trim();
+  }
+
+
+  public static Boolean isValueBlank (String pair) {
+    return String.isBlank(pair.substringAfter(':'));
   }
 
 
@@ -81,16 +88,16 @@ public with sharing class StaticTask {
     Contact record = new Contact();
 
     for (String fieldString : listOfContactFields) {
-      if (fieldString.contains('FirstName') && StaticTask.isRightPartOfPairNotBlank(fieldString)) {
-        record.FirstName = StaticTask.getRightPartOfPairWithoutSpaces(fieldString);
+      if (StaticTask.isValueBlank(fieldString)) {
+        continue;
       }
 
-      else if (fieldString.contains('LastName') && StaticTask.isRightPartOfPairNotBlank(fieldString)) {
-        record.LastName = StaticTask.getRightPartOfPairWithoutSpaces(fieldString);
-      }
+      String fieldName = StaticTask.getField(fieldString);
 
-      else if (fieldString.contains('Email') && StaticTask.isRightPartOfPairNotBlank(fieldString)) {
-        record.Email = StaticTask.getRightPartOfPairWithoutSpaces(fieldString);
+      switch on fieldName {
+        when 'FirstName' {record.FirstName = StaticTask.getValue(fieldString);}
+        when 'LastName' {record.LastName = StaticTask.getValue(fieldString);}
+        when 'Email' {record.Email = StaticTask.getValue(fieldString);}
       }
     }
 
