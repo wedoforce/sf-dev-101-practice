@@ -1,7 +1,7 @@
 public with sharing class StaticTask {
   /*This method recieves a string payload with contact data that loks like  
 
-  'FirstName: firstname, LastName: lastname, Email: ex@mple.com;
+  'FirstName: firstname, LastName: lastname, Email: ex@mple.com; 
    FirstName: firstname, LastName: lastname, Email: ex@mple.com;
    ...
   '
@@ -9,30 +9,68 @@ public with sharing class StaticTask {
   . Then it parses data and return Map collection where key is meail and value is Contact
   Feel free to refactorthis class. Don't forget about single responsibility approach when you create a new method.
   */
+  Map<String, Contact> emailToContactMap = new Map<String, Contact>();
   public static Map<String, Contact> extractEmailToContactMap(String payload) {
-    Map<String, Contact> emailToContactMap = new Map<String, Contact>();
-    List<String> contacts = payload.split(';');
-    for (String contactAsString : contacts) {
-      Contact parsedContact = new Contact();
-      List<String> contactSeparatedByComaString = contactAsString.split(',');
-      for (String element : contactSeparatedByComaString) {
-        if (element.contains('FirstName')) {
-          parsedContact.FirstName = element.split(':')[1].replaceAll(' ', '');
-        }
-        if (element.contains('LastName')) {
-          parsedContact.LastName = element.split(':')[1].replaceAll(' ', '');
-        }
-        if (element.contains('Email')) {
-          if (String.isNotBlank(element.split(':')[1])) {
-            parsedContact.Email = element.split(':')[1].replaceAll(' ', '');
-            emailToContactMap.put(
-              element.split(':')[1].replaceAll(' ', ''),
-              parsedContact
-            );
-          }
-        }
+    List<String> stringOfContacts = extractContsctsAsSting(payload);
+    List<List<String>> contactStringListofList = makeContactStringListofList(
+      stringOfContacts
+    );
+    List<Contact> contactsToAdd = makeListOfContacts(contactStringListofList);
+
+    return convertToMap(contactsToAdd);
+  }
+
+  public static List<String> extractContsctsAsSting(String payload) {
+    if (payload == null)
+      return null;
+
+    List<String> stringOfContacts = payload.split(';'); //FirstName: firstname, LastName: lastname, Email: ex@mple.com
+    return stringOfContacts;
+  }
+
+  public static List<List<String>> makeContactStringListofList(
+    List<String> stringOfContacts
+  ) {
+    List<List<String>> contactStringListofList = new List<List<String>>();
+
+    for (String contactString : stringOfContacts) {
+      if (contactString.contains('@')) {
+        List<String> contactStringAsList = contactString.split(','); // {FirstName: firstname}, {LastName: lastname}, {Email: ex@mple.com}
+
+        contactStringListofList.add(contactStringAsList);
       }
     }
-    return emailToContactMap;
+    return contactStringListofList;
+  }
+
+  public static List<Contact> makeListOfContacts(
+    List<List<String>> contactStringListofList
+  ) {
+    List<Contact> contactsToAdd = new List<Contact>();
+    for (List<String> conSplittedList : contactStringListofList) {
+      // {FirstName: firstname}, {LastName: lastname}, {Email: ex@mple.com}
+      if (conSplittedList[2] != null) {
+        Contact parsedContact = new Contact();
+        parsedContact.FirstName = conSplittedList[0]
+          .remove('FirstName: ')
+          .trim();
+        parsedContact.LastName = conSplittedList[1].remove('LastName: ').trim();
+        parsedContact.Email = conSplittedList[2].remove('Email: ').trim();
+
+        contactsToAdd.add(parsedContact);
+      }
+    }
+    return contactsToAdd;
+  }
+
+  public static Map<String, contact> convertToMap(List<Contact> contactsToAdd) {
+    Map<String, Contact> emailContactMap = new Map<String, Contact>();
+    for (contact c : contactsToAdd) {
+      if (c.Email != null) {
+        emailContactMap.put(c.email, c);
+        system.debug('print map ' + emailContactMap);
+      }
+    }
+    return emailContactMap;
   }
 }
