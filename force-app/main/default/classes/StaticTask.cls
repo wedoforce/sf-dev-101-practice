@@ -23,8 +23,7 @@ public with sharing class StaticTask {
   public static List<String> extractContsctsAsSting(String payload) {
     if (payload == null)
       return null;
-    payload.trim();
-    system.debug('trimmed ' + payload); //trim spaces
+
     List<String> stringOfContacts = payload.split(';'); //FirstName: firstname, LastName: lastname, Email: ex@mple.com
     return stringOfContacts;
   }
@@ -35,7 +34,7 @@ public with sharing class StaticTask {
     List<List<String>> contactStringListofList = new List<List<String>>();
 
     for (String contactString : stringOfContacts) {
-      //{FirstName: firstname, LastName: lastname, Email: ex@mple.com}
+      system.debug('nospaces ' + contactString);
       if (contactString.contains('@')) {
         List<String> contactStringAsList = contactString.split(','); // {FirstName: firstname}, {LastName: lastname}, {Email: ex@mple.com}
         system.debug('contactString.split ' + contactStringAsList.size());
@@ -54,9 +53,11 @@ public with sharing class StaticTask {
       // {FirstName: firstname}, {LastName: lastname}, {Email: ex@mple.com}
       if (conSplittedList[2] != null) {
         Contact parsedContact = new Contact();
-        parsedContact.FirstName = conSplittedList[0].remove('FirstName: ');
-        parsedContact.LastName = conSplittedList[1].remove('LastName: ');
-        parsedContact.Email = conSplittedList[2].remove('Email: ');
+        parsedContact.FirstName = conSplittedList[0]
+          .remove('FirstName: ')
+          .trim();
+        parsedContact.LastName = conSplittedList[1].remove('LastName: ').trim();
+        parsedContact.Email = conSplittedList[2].remove('Email: ').trim();
         system.debug('parsedContact ' + parsedContact);
         contactsToAdd.add(parsedContact);
       }
