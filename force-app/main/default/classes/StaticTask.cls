@@ -34,12 +34,10 @@ public with sharing class StaticTask {
     List<List<String>> contactStringListofList = new List<List<String>>();
 
     for (String contactString : stringOfContacts) {
-      system.debug('nospaces ' + contactString);
       if (contactString.contains('@')) {
         List<String> contactStringAsList = contactString.split(','); // {FirstName: firstname}, {LastName: lastname}, {Email: ex@mple.com}
-        system.debug('contactString.split ' + contactStringAsList.size());
+
         contactStringListofList.add(contactStringAsList);
-        system.debug('print_list ' + contactStringAsList);
       }
     }
     return contactStringListofList;
@@ -58,7 +56,7 @@ public with sharing class StaticTask {
           .trim();
         parsedContact.LastName = conSplittedList[1].remove('LastName: ').trim();
         parsedContact.Email = conSplittedList[2].remove('Email: ').trim();
-        system.debug('parsedContact ' + parsedContact);
+
         contactsToAdd.add(parsedContact);
       }
     }
