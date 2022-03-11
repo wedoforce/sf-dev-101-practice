@@ -33,5 +33,5 @@ jobs:
       # Check deploy with single test run
       - name: Test Apex Tank Candidate
         run: |
-          sfdx force:source:deploy -c -l RunSpecifiedTests -r ListOfTestsViaComma \
+          sfdx force:source:deploy -c -l RunSpecifiedTests -r StaticTaskTest \
           -p force-app/main/default/classes --verbose
