@@ -16,6 +16,9 @@ Insert new Account with your last name as Account.Name using apex DML. Show it u
 ## Task 2
 
 Insert Contact for created in previous task Account with FirstName = 'Test' and LastName = 'Contact'
+
+Use field `AccountId` to link contact to an account.
+
 ## Task 3
 
 Update Test Contact with email = 'ex@maple.com' and insert a new one with your first name and last name in one DML;
@@ -23,6 +26,3 @@ Update Test Contact with email = 'ex@maple.com' and insert a new one with your f
 ## Task 4
 
 Delete Test Contact and Account in one DML
-## Task 5
-
-Insert Contact and User in one DML
