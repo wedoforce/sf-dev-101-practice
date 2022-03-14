@@ -26,3 +26,19 @@ Please complete [this feedback](https://forms.gle/2cGmmYAPSSSQnMo38) form by Mon
 **Feedback**
 
 Please complete [this feedback](https://forms.gle/BcYKpTLBS8wQto9C8) form by Monday 21st of Feb'22
+
+## Week 3
+
+**Dates**: Feb 7th 2022 - Feb 13th 2022
+
+**Lessons**:
+- [Apex Basics 102](https://github.com/wedoforce/sf-dev-101-practice/tree/lessons/apex-basics-102) - deadline: Feb 13th
+
+## Week 4
+
+**Dates**: Feb 7th 2022 - Feb 13th 2022
+
+**Lessons**:
+- [SOQL](https://github.com/wedoforce/sf-dev-101-practice/tree/lessons/apex-103-soql) - deadline: Mar 21st
+- [DML](https://github.com/wedoforce/sf-dev-101-practice/tree/lessons/apex-103-dml) - deadline: Mar 21st
+
