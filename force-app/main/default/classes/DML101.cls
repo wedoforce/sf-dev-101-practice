@@ -27,10 +27,12 @@ public with sharing class DML101 {
     List<Contact> cntList = [SELECT Id,Email FROM Contact WHERE FirstName='Test' AND LastName='Contact' LIMIT 1];
     List<Contact> cntListToUpsert = new List<Contact>();
 
-    Contact cnt1 = cntList[0];
-    cnt1.Email = 'ex@maple.com';
-    cntListToUpsert.add(cnt1);
-
+    if (cntList.size() > 0) {
+      Contact cnt1 = cntList[0];
+      cnt1.Email = 'ex@maple.com';
+      cntListToUpsert.add(cnt1);
+    }
+    
     Contact cnt2 = new Contact(FirstName='Oleg', LastName='Mastriukov');
     cntListToUpsert.add(cnt2);
 
