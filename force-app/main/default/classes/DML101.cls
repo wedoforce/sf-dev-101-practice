@@ -40,13 +40,20 @@ public with sharing class DML101 {
 
   // Delete Test Contact and Account in one DML
   public static void task04() {
-    List<Account> accList = [SELECT Id FROM Account WHERE Name='Mastriukov' LIMIT 1];
-    List<Contact> cntList = [SELECT Id,Email FROM Contact WHERE FirstName='Test' AND LastName='Contact' LIMIT 1];
+    List<Account> accList = [SELECT Id FROM Account WHERE Name='Mastriukov111' LIMIT 1];
+    List<Contact> cntList = [SELECT Id,Email FROM Contact WHERE FirstName='Test111' AND LastName='Contact' LIMIT 1];
     List<sObject> sObjListToDelete = new List<sObject>();
 
-    sObjListToDelete.add(accList[0]);
-    sObjListToDelete.add(cntList[0]);
+    if (accList.size() > 0) {
+        sObjListToDelete.add(accList[0]);
+    }
 
-    delete sObjListToDelete;
+    if (cntList.size() > 0) {
+        sObjListToDelete.add(cntList[0]);
+    }
+    
+    if (sObjListToDelete.size() > 0) {
+        delete sObjListToDelete;
+    }
   }
 }
