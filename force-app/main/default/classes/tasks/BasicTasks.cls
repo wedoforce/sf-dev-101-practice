@@ -3,8 +3,10 @@ public class BasicTasks {
   public static Long sumIntegers(Integer a, Integer b) {
     // ignore public static.. Focus on variables
     //write your code below this line
-    Long sum = a + b;
-
+    Long x = a;
+    Long y = b;
+    Long sum = x + y;
+    //Long sum = a + b;
     return sum;
     //write your code above this line
   }
