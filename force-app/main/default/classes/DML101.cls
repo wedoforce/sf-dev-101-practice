@@ -24,13 +24,17 @@ public with sharing class DML101 {
       new Conact(FirstName = 'Veronika', LastName = 'Kolobova')
     };
     newContacts.add(task2);
-    delete newContacts;
+    upsert newContacts Contact.Id;
   }
 
   // Delete Test Contact and Account in one DML
   public static void task04() {
-   Account task1Account =[SELECT Id from Account WHERE Name='Kolobova' Limit 1];
-   delete task1Account;
+   
     //put your code here
+   Account task1Account =[SELECT Id from Account WHERE Name='Kolobova' Limit 1];
+   List<Contact> testcontact =[SELECT id from Contact WHERE Accountid=:tast1Account.id];
+   List<SObject> toDelete = new List<SObject>();
+   toDelete.add(task1Account, testcontact);
+   delete toDelete;
   }
 }
