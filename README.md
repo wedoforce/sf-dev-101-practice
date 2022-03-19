@@ -1,7 +1,7 @@
 # DML
-As SOQL Data Manipulation Language provides tools to operate with data records. If SOQL gives you opportunity to read data, DML helps with creating, editing an deleteing data.
+As SOQL Data Manipulation Language provides tools to operate on data records. If SOQL gives you opportunity to read data, DML helps with creating, editing, and deleteing data.
 
-We recommend you to complete following trailhead module https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_dml
+We recommend you to complete [the following trailhead module](https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_dml).
 
 # Prerequirements for homework
 
@@ -11,18 +11,17 @@ We recommend you to complete following trailhead module https://trailhead.salesf
 
 ## Task 1
 
-Insert new Account with your last name as Account.Name using apex DML. Show it using System.debug()
+Insert new Account with your last name as Account.Name field using apex DML. Show it using System.debug()
 
 ## Task 2
 
-Insert Contact for created in previous task Account with FirstName = 'Test' and LastName = 'Contact'
-
-Use field `AccountId` to link contact to an account.
+Insert Contact with FirstName = 'Test' and LastName = 'Contact' for the Account created in the previous task.
+Use AccountId field to link the Contact to the Account.
 
 ## Task 3
 
-Update Test Contact with email = 'ex@maple.com' and insert a new one with your first name and last name in one DML;
+Update previously created Contact with an email = 'ex@maple.com', and insert a new one with your first name and last name in one DML. 
 
 ## Task 4
 
-Delete Test Contact and Account in one DML
+Delete previously created Contact and Account in one DML.
