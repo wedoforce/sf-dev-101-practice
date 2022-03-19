@@ -32,20 +32,14 @@ public class BasicTasks {
   // a: any integer; n: n >= 0 (n can be greater or equal to 0)
   public static Decimal mathPower(Integer a, Integer n) {
     //write your code below this line
-    Decimal result = 0;
-    Decimal c = 0;
+    Decimal result = 1;
     Decimal d = 1;
-    if (n == 0) {
-      c = 1;
-    } else {
-      Integer count = 1;
-      while (count <= n) {
-        count++;
-        c = d * a;
-        d = c;
-      }
+    Integer count = 1;
+    while (count <= n) {
+      count++;
+      result = d * a;
+      d = result;
     }
-    result = c;
     return result;
     //write your code above this line
   }
