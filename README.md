@@ -65,3 +65,47 @@ Write a SOQL query to get all contacts grouped by LastName.
 ## Task 11
 
 Write a SOQL query to get all contact names and query it 150 times in the loop.
+=======
+# WeDoForce: Junior Dev
+
+[Course overview](https://github.com/wedoforce/sf-dev-101-practice/tree/course-overview)
+
+If you have any organizational questions - please visit [FAQ](/FAQ.md) before asking.
+
+## Week 1
+
+**Dates**: Jan 31st 2022 - Feb 6th 2022
+
+**Lessons**:
+- [Environment setup](https://github.com/wedoforce/sf-dev-101-practice/tree/lessons/environment-check) - deadline: Feb 6th
+- [Git 101](https://github.com/wedoforce/sf-dev-101-practice/tree/lessons/git-101) - deadline: Feb 6th
+
+**Feedback**
+
+Please complete [this feedback](https://forms.gle/2cGmmYAPSSSQnMo38) form by Monday
+
+## Week 2
+
+**Dates**: Feb 7th 2022 - Feb 13th 2022
+
+**Lessons**:
+- [Apex Basics 101](https://github.com/wedoforce/sf-dev-101-practice/tree/lessons/apex-basics-101) - deadline: Feb 13th
+
+**Feedback**
+
+Please complete [this feedback](https://forms.gle/BcYKpTLBS8wQto9C8) form by Monday 21st of Feb'22
+
+## Week 3
+
+**Dates**: Feb 7th 2022 - Feb 13th 2022
+
+**Lessons**:
+- [Apex Basics 102](https://github.com/wedoforce/sf-dev-101-practice/tree/lessons/apex-basics-102) - deadline: Feb 13th
+
+## Week 4
+
+**Dates**: Feb 7th 2022 - Feb 13th 2022
+
+**Lessons**:
+- [SOQL](https://github.com/wedoforce/sf-dev-101-practice/tree/lessons/apex-103-soql) - deadline: Mar 21st
+- [DML](https://github.com/wedoforce/sf-dev-101-practice/tree/lessons/apex-103-dml) - deadline: Mar 21st
