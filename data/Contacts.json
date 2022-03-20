@@ -1,0 +1,76 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef1"
+            },
+            "FirstName": "Chandler",
+            "LastName": "Bing",
+            "AccountId": "@AccountRef1"
+        },
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef2"
+            },
+            "FirstName": "Rachel",
+            "LastName": "Green-Geller",
+            "AccountId": "@AccountRef2"
+        },
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef3"
+            },
+            "FirstName": "Ben",
+            "LastName": "Geller",
+            "AccountId": "@AccountRef3"
+        },
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef4"
+            },
+            "FirstName": "Monica",
+            "LastName": "Geller",
+            "AccountId": "@AccountRef4"
+        },
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef5"
+            },
+            "FirstName": "Fibi",
+            "LastName": "Bufe",
+            "AccountId": "@AccountRef5"
+        },
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef6"
+            },
+            "FirstName": "Joey",
+            "LastName": "Tribbiani",
+            "AccountId": "@AccountRef6"
+        },
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef7"
+            },
+            "FirstName": "John",
+            "LastName": "Doe",
+            "AccountId": "@AccountRef7"
+        },
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef8"
+            },
+            "FirstName": "Rose",
+            "LastName": "Geller",
+            "AccountId": "@AccountRef8"
+        }
+    ]
+}
